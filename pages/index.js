@@ -1,12 +1,11 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>AB SITE</title>
         <meta name="description" content="African books site" />
         <link rel="icon" href="/favicomn.ico" />
       </Head>
