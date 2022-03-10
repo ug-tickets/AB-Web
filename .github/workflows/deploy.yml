@@ -26,16 +26,12 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - name: Installing NPM Packages
+    - name: Installing NPM Scripts
       run: npm i
-    - name: Running Build
+    - name: Run build
       run: npm run build --if-present
     - name: Running Tests
       run: npm test
- 
-        
-      
-        
-        
-        
-        
+    - name: Deploy to Netlify
+      run: curl -X POST -d '{}' ${{ secrets.NETLIFY_BUILD_HOOK }}
+
