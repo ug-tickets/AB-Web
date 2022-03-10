@@ -20,7 +20,7 @@ export default function Home() {
         <a
           href="#"
         >
-          Powered by{' '}
+          Powered by
         </a>
       </footer>
     </div>
