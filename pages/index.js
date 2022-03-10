@@ -149,8 +149,26 @@ export default function Home() {
           </div>
         </main>
 
+<<<<<<< HEAD
         <Footer />
       </div>
     </>
   );
+=======
+      <main className={styles.main}>
+        <h1 className={styles.title}>
+          Welcome to <a href="#">The African Books Site</a>
+        </h1>
+      </main>
+
+      <footer className={styles.footer}>
+        <a
+          href="#"
+        >
+          Powered by AB SITE
+        </a>
+      </footer>
+    </div>
+  )
+>>>>>>> AB-8: Testing site deploys
 }
