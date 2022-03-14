@@ -15,6 +15,7 @@ module.exports = {
   rules: {
     "require-jsdoc": 0,
     "@next/next/no-img-element": "off",
+    "react/prop-types": "off",
   },
   settings: {
     react: {
