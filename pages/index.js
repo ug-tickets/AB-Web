@@ -8,6 +8,9 @@ export default function Home() {
       <Head>
         <title>AB SITE</title>
         <meta name="description" content="African books site" />
+        <meta name="handheldfriendly" content="true" />
+        <meta name="mobileoptimized" content="240" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <link rel="icon" href="/favicomn.ico" />
       </Head>
 
