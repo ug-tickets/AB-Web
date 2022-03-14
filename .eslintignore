@@ -1,0 +1,6 @@
+!.eslintrc.json
+documentation/
+build/
+.next/
+
+src/**/**/__snapshots__/*
