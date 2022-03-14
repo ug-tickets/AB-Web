@@ -1,28 +1,24 @@
 module.exports = {
-  'env': {
-    'browser': true,
-    'es2021': true,
+  env: {
+    browser: true,
+    es2021: true,
   },
-  'extends': [
-    'plugin:react/recommended',
-    'google',
-    "prettier"
-  ],
-  'parserOptions': {
-    'ecmaFeatures': {
-      'jsx': true,
+  extends: ["plugin:react/recommended", "google", "prettier"],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
     },
-    'ecmaVersion': 'latest',
-    'sourceType': 'module',
+    ecmaVersion: "latest",
+    sourceType: "module",
   },
-  'plugins': [
-    'react',
-  ],
-  'rules': {
+  plugins: ["react"],
+  rules: {
+    "require-jsdoc": 0,
+    "@next/next/no-img-element": "off",
   },
   settings: {
     react: {
-      version: "latest"
-    }
-  }
+      version: "latest",
+    },
+  },
 };
