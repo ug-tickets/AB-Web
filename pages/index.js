@@ -1,10 +1,11 @@
 import React from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import { Header } from "../components/header";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>AB SITE</title>
         <meta name="description" content="African books site" />
@@ -13,16 +14,18 @@ export default function Home() {
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <link rel="icon" href="/favicomn.ico" />
       </Head>
+      <Header />
+      <div className={styles.container}>
+        <main className={styles.main}>
+          <h1 className={styles.title}>
+            Welcome to <a href="#">The African Books Site</a>
+          </h1>
+        </main>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="#">The African Books Site</a>
-        </h1>
-      </main>
-
-      <footer className={styles.footer}>
-        <a href="#">Powered by AB</a>
-      </footer>
-    </div>
+        <footer className={styles.footer}>
+          <a href="#">Powered by AB</a>
+        </footer>
+      </div>
+    </>
   );
 }
