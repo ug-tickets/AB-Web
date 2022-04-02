@@ -1,0 +1,169 @@
+.header {
+  width: 100vw;
+  padding: 8px;
+  font-size: 13px;
+}
+.headerInner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+}
+.logo {
+  width: 250px;
+  padding: 5px;
+}
+.searchBar {
+  width: 550px;
+  padding: 0 10px;
+  margin-top: 0px;
+}
+.faq {
+  width: 50px;
+  padding: 10px 5px 5px 5px;
+}
+.login {
+  width: 100px;
+  padding: 10px 5px 5px 5px;
+}
+.cart {
+  width: 70px;
+  padding: 10px 5px 5px 5px;
+}
+.input {
+  border: solid 1px #e6e6e6;
+  padding: 7px 5px 7px 20px;
+  width: 400px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+.container {
+  padding: 0 2rem;
+}
+.subHeader {
+  background-color: #f6f6f6;
+  width: 100vw;
+  position: relative;
+}
+.navBar {
+  max-width: 780px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  z-index: 10;
+  font-size: 14px;
+}
+.navBar > div {
+  flex: 1;
+  text-align: center;
+}
+.navBar .topLink {
+  padding-top: 15px;
+}
+
+.dropDownContent {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  width: 100%;
+  z-index: 1;
+  left: 0;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 0.5s ease-out;
+  padding: 0 10%;
+}
+.dropDown .dropbtn {
+  border: none;
+  cursor: pointer;
+  padding: 15px 0;
+  position: relative;
+}
+.dropDown .dropbtn::after {
+  content: "\2303";
+  position: absolute;
+  right: -17px;
+  top: 13px;
+  transform: rotate(180deg);
+}
+.dropDown .dropDownRow {
+  display: flex;
+  background-color: white;
+  border: solid 1px #c7c6c6;
+  border-top: none;
+  padding: 0px 0px 0px 10px;
+  font-size: 12px;
+}
+.dropDownRow .dropDownCol {
+  flex: 1;
+  padding: 10px 20px;
+}
+.dropDownRow .dropDownCol:last-child {
+  padding: 0;
+}
+.dropDown:hover .dropDownContent {
+  display: block;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.dropDownColSection .colHeader {
+  font-weight: bold;
+  line-height: 40px;
+  padding-top: 10px;
+  text-align: left;
+}
+
+.dropDownColSection ul {
+  padding: 0;
+  text-align: left;
+}
+.dropDownColSection ul li {
+  line-height: 25px;
+}
+.dropDownColSection ul li:last-child a {
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.dropDownColImg {
+  background: #f2becb;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  padding-left: 40px;
+  padding-top: 30px;
+  position: relative;
+}
+.dropDownColImg div:nth-child(1) {
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 30px;
+}
+.dropDownColImg div:nth-child(2) {
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.dropDownColImg button {
+  color: black;
+  border: solid 1px white;
+  padding: 10px 25px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+.dropDownColImg .dealImg {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  height: 200px;
+  left: 0;
+}
+.dropDownColImg .dealImg img {
+  width: 100%;
+  height: auto;
+}
