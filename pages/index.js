@@ -3,7 +3,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { Header } from "../components/header";
 
-export default function Home() {
+export default function Home({ header }) {
   return (
     <>
       <Head>
@@ -14,7 +14,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <link rel="icon" href="/favicomn.ico" />
       </Head>
-      <Header />
+      <Header {...header} />
       <div className={styles.container}>
         <main className={styles.main}>
           <h1 className={styles.title}>
@@ -28,4 +28,14 @@ export default function Home() {
       </div>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const res = await fetch("http://localhost:4000/Header");
+  const response = await res.json();
+  return {
+    props: {
+      header: response,
+    },
+  };
 }

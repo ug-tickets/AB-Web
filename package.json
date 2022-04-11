@@ -2,7 +2,7 @@
   "name": "ab-web",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev & json-server --watch db.json --port 4000",
     "build": "next build",
     "start": "next start",
     "prettify": "prettier --config .prettierrc './**/**.{ts,tsx,js}' --write",
@@ -10,6 +10,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "json-server": "^0.17.0",
     "next": "12.0.10",
     "react": "17.0.2",
     "react-dom": "17.0.2"

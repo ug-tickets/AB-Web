@@ -1,0 +1,349 @@
+{
+  "Header": {
+    "mainHeader": [],
+    "subHeader": [
+      { "link": "Home", "url": "#" },
+      {
+        "link": "Categories",
+        "url": "#",
+        "deal": {
+          "title": "Deals",
+          "subTitle": "eBooks",
+          "btnTxt": "Shop Now",
+          "btnUrl": "#",
+          "dealImg": "images/deal.png",
+          "dealBg": "#f2becb"
+        },
+        "columns": [
+          {
+            "rows": [
+              {
+                "colHeader": "Biographies & Memories",
+                "subLinks": [
+                  { "link": "Arts & Literature", "url": "#" },
+                  { "link": "Cultural", "url": "#" },
+                  { "link": "Pan African", "url": "#" },
+                  { "link": "Histrorical", "url": "#" },
+                  { "link": "Leadership & Notable People", "url": "#" },
+                  { "link": "Shop All", "url": "#" }
+                ]
+              },
+              {
+                "colHeader": "Biographies & Memories",
+                "subLinks": [
+                  { "link": "Arts & Literature", "url": "#" },
+                  { "link": "Cultural", "url": "#" },
+                  { "link": "Pan African", "url": "#" },
+                  { "link": "Histrorical", "url": "#" },
+                  { "link": "Leadership & Notable People", "url": "#" },
+                  { "link": "Shop All", "url": "#" }
+                ]
+              }
+            ]
+          },
+          {
+            "rows": [
+              {
+                "colHeader": "Children's",
+                "subLinks": [
+                  { "link": "Arts & Literature", "url": "#" },
+                  { "link": "Cultural", "url": "#" },
+                  { "link": "Pan African", "url": "#" },
+                  { "link": "Histrorical", "url": "#" },
+                  { "link": "Leadership & Notable People", "url": "#" },
+                  { "link": "Shop All", "url": "#" }
+                ]
+              },
+              {
+                "colHeader": "Children's",
+                "subLinks": [
+                  { "link": "Arts & Literature", "url": "#" },
+                  { "link": "Cultural", "url": "#" },
+                  { "link": "Pan African", "url": "#" },
+                  { "link": "Histrorical", "url": "#" },
+                  { "link": "Leadership & Notable People", "url": "#" },
+                  { "link": "Shop All", "url": "#" }
+                ]
+              }
+            ]
+          },
+          {
+            "rows": [
+              {
+                "colHeader": "Top Authors",
+                "subLinks": [
+                  { "link": "Central Africa", "url": "#" },
+                  { "link": "West Africa", "url": "#" },
+                  { "link": "South Africa", "url": "#" },
+                  { "link": "East Africa", "url": "#" },
+                  { "link": "North Africa", "url": "#" },
+                  { "link": "West Africa", "url": "#" },
+                  { "link": "South Africa", "url": "#" },
+                  { "link": "East Africa", "url": "#" },
+                  { "link": "Central Africa", "url": "#" },
+                  { "link": "Shop All", "url": "#" }
+                ]
+              }
+            ]
+          },
+          {
+            "rows": [
+              {
+                "colHeader": "Popular Features",
+                "subLinks": [
+                  { "link": "New Releases", "url": "#" },
+                  { "link": "Best Books Ever", "url": "#" },
+                  { "link": "Book Club Classics", "url": "#" },
+                  { "link": "Our Bookmarks", "url": "#" },
+                  { "link": "Bargain Shop", "url": "#" },
+                  { "link": "Shop All", "url": "#" }
+                ]
+              },
+              {
+                "colHeader": "Best Selling Books",
+                "subLinks": [
+                  { "link": "With the fire on High", "url": "#" },
+                  { "link": "Moby Dick or the White Whale", "url": "#" },
+                  { "link": "Project Hail Mary", "url": "#" },
+                  { "link": "Ancient Art of Psycological Warfare", "url": "#" },
+                  { "link": "Jerusale: A Cookbook", "url": "#" },
+                  { "link": "View All", "url": "#" }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "link": "eBooks",
+        "url": "#",
+
+        "deal": {
+          "title": "Deals",
+          "subTitle": "eBooks",
+          "btnTxt": "Shop Now",
+          "btnUrl": "#",
+          "dealImg": "images/deal.png",
+          "dealBg": "red"
+        },
+        "columns": [
+          {
+            "rows": [
+              {
+                "colHeader": "Biographies & Memories",
+                "subLinks": [
+                  { "link": "Arts & Literature", "url": "#" },
+                  { "link": "Cultural", "url": "#" },
+                  { "link": "Pan African", "url": "#" },
+                  { "link": "Histrorical", "url": "#" },
+                  { "link": "Leadership & Notable People", "url": "#" },
+                  { "link": "Shop All", "url": "#" }
+                ]
+              },
+              {
+                "colHeader": "Biographies & Memories",
+                "subLinks": [
+                  { "link": "Arts & Literature", "url": "#" },
+                  { "link": "Cultural", "url": "#" },
+                  { "link": "Pan African", "url": "#" },
+                  { "link": "Histrorical", "url": "#" },
+                  { "link": "Leadership & Notable People", "url": "#" },
+                  { "link": "Shop All", "url": "#" }
+                ]
+              }
+            ]
+          },
+          {
+            "rows": [
+              {
+                "colHeader": "Children's",
+                "subLinks": [
+                  { "link": "Arts & Literature", "url": "#" },
+                  { "link": "Cultural", "url": "#" },
+                  { "link": "Pan African", "url": "#" },
+                  { "link": "Histrorical", "url": "#" },
+                  { "link": "Leadership & Notable People", "url": "#" },
+                  { "link": "Shop All", "url": "#" }
+                ]
+              },
+              {
+                "colHeader": "Children's",
+                "subLinks": [
+                  { "link": "Arts & Literature", "url": "#" },
+                  { "link": "Cultural", "url": "#" },
+                  { "link": "Pan African", "url": "#" },
+                  { "link": "Histrorical", "url": "#" },
+                  { "link": "Leadership & Notable People", "url": "#" },
+                  { "link": "Shop All", "url": "#" }
+                ]
+              }
+            ]
+          },
+          {
+            "rows": [
+              {
+                "colHeader": "Top Authors",
+                "subLinks": [
+                  { "link": "Central Africa", "url": "#" },
+                  { "link": "West Africa", "url": "#" },
+                  { "link": "South Africa", "url": "#" },
+                  { "link": "East Africa", "url": "#" },
+                  { "link": "North Africa", "url": "#" },
+                  { "link": "West Africa", "url": "#" },
+                  { "link": "South Africa", "url": "#" },
+                  { "link": "East Africa", "url": "#" },
+                  { "link": "Central Africa", "url": "#" },
+                  { "link": "Central Africa", "url": "#" },
+                  { "link": "West Africa", "url": "#" },
+                  { "link": "South Africa", "url": "#" },
+                  { "link": "East Africa", "url": "#" },
+                  { "link": "North Africa", "url": "#" },
+                  { "link": "West Africa", "url": "#" },
+                  { "link": "South Africa", "url": "#" },
+                  { "link": "Shop All", "url": "#" }
+                ]
+              }
+            ]
+          },
+          {
+            "rows": [
+              {
+                "colHeader": "Popular Features",
+                "subLinks": [
+                  { "link": "New Releases", "url": "#" },
+                  { "link": "Best Books Ever", "url": "#" },
+                  { "link": "Book Club Classics", "url": "#" },
+                  { "link": "Our Bookmarks", "url": "#" },
+                  { "link": "Bargain Shop", "url": "#" },
+                  { "link": "Shop All", "url": "#" }
+                ]
+              },
+              {
+                "colHeader": "Best Selling Books",
+                "subLinks": [
+                  { "link": "With the fire on High", "url": "#" },
+                  { "link": "Moby Dick or the White Whale", "url": "#" },
+                  { "link": "Project Hail Mary", "url": "#" },
+                  { "link": "Ancient Art of Psycological Warfare", "url": "#" },
+                  { "link": "Jerusale: A Cookbook", "url": "#" },
+                  { "link": "View All", "url": "#" }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "link": "Audiobooks",
+        "url": "#",
+        "deal": {
+          "title": "Deals",
+          "subTitle": "eBooks",
+          "btnTxt": "Shop Now",
+          "btnUrl": "#",
+          "dealImg": "images/deal.png",
+          "dealBg": "blue"
+        },
+        "columns": [
+          {
+            "rows": [
+              {
+                "colHeader": "Biographies & Memories",
+                "subLinks": [
+                  { "link": "Arts & Literature", "url": "#" },
+                  { "link": "Cultural", "url": "#" },
+                  { "link": "Pan African", "url": "#" },
+                  { "link": "Histrorical", "url": "#" },
+                  { "link": "Leadership & Notable People", "url": "#" },
+                  { "link": "Shop All", "url": "#" }
+                ]
+              },
+              {
+                "colHeader": "Biographies & Memories",
+                "subLinks": [
+                  { "link": "Arts & Literature", "url": "#" },
+                  { "link": "Cultural", "url": "#" },
+                  { "link": "Pan African", "url": "#" },
+                  { "link": "Histrorical", "url": "#" },
+                  { "link": "Leadership & Notable People", "url": "#" },
+                  { "link": "Shop All", "url": "#" }
+                ]
+              }
+            ]
+          },
+          {
+            "rows": [
+              {
+                "colHeader": "Children's",
+                "subLinks": [
+                  { "link": "Arts & Literature", "url": "#" },
+                  { "link": "Cultural", "url": "#" },
+                  { "link": "Pan African", "url": "#" },
+                  { "link": "Histrorical", "url": "#" },
+                  { "link": "Leadership & Notable People", "url": "#" },
+                  { "link": "Shop All", "url": "#" }
+                ]
+              },
+              {
+                "colHeader": "Children's",
+                "subLinks": [
+                  { "link": "Arts & Literature", "url": "#" },
+                  { "link": "Cultural", "url": "#" },
+                  { "link": "Pan African", "url": "#" },
+                  { "link": "Histrorical", "url": "#" },
+                  { "link": "Leadership & Notable People", "url": "#" },
+                  { "link": "Shop All", "url": "#" }
+                ]
+              }
+            ]
+          },
+          {
+            "rows": [
+              {
+                "colHeader": "Top Authors",
+                "subLinks": [
+                  { "link": "Central Africa", "url": "#" },
+                  { "link": "West Africa", "url": "#" },
+                  { "link": "South Africa", "url": "#" },
+                  { "link": "East Africa", "url": "#" },
+                  { "link": "North Africa", "url": "#" },
+                  { "link": "West Africa", "url": "#" },
+                  { "link": "Shop All", "url": "#" }
+                ]
+              }
+            ]
+          },
+          {
+            "rows": [
+              {
+                "colHeader": "Popular Features",
+                "subLinks": [
+                  { "link": "New Releases", "url": "#" },
+                  { "link": "Best Books Ever", "url": "#" },
+                  { "link": "Book Club Classics", "url": "#" },
+                  { "link": "Our Bookmarks", "url": "#" },
+                  { "link": "Bargain Shop", "url": "#" },
+                  { "link": "Shop All", "url": "#" }
+                ]
+              },
+              {
+                "colHeader": "Best Selling Books",
+                "subLinks": [
+                  { "link": "With the fire on High", "url": "#" },
+                  { "link": "Moby Dick or the White Whale", "url": "#" },
+                  { "link": "Project Hail Mary", "url": "#" },
+                  { "link": "Ancient Art of Psycological Warfare", "url": "#" },
+                  { "link": "Jerusale: A Cookbook", "url": "#" },
+                  { "link": "View All", "url": "#" }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      { "link": "Shop", "url": "#" },
+      { "link": "Features", "url": "#" },
+      { "link": "Blog", "url": "#" }
+    ]
+  }
+}
