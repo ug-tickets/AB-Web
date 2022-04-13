@@ -4,12 +4,13 @@
   "scripts": {
     "dev": "next dev & json-server --watch db.json --port 4000",
     "build": "next build",
-    "start": "next start",
+    "start": "next start & json-server --watch db.json --port 4000",
     "prettify": "prettier --config .prettierrc './**/**.{ts,tsx,js}' --write",
     "lint": "next lint",
     "prepare": "husky install"
   },
   "dependencies": {
+    "clsx": "^1.1.1",
     "json-server": "^0.17.0",
     "next": "12.0.10",
     "react": "17.0.2",
