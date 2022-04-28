@@ -14,7 +14,7 @@ const Header = ({ mainHeader, subHeader }) => {
   const theSubHeader = subHeader.map((item, i) => (
     <>
       {!item.columns ? (
-        <div key={i} className="h-11 pt-3 flex-1 text-center">
+        <div key={i} className="h-11 pt-3 flex-1 lg:text-center">
           <a href={item.url}>{item.link}</a>
         </div>
       ) : (
@@ -22,27 +22,33 @@ const Header = ({ mainHeader, subHeader }) => {
           key={i}
           className={clsx(
             "flex-1",
-            "text-center",
-            "mx-3",
+            "md:mx-3",
+            "pb-3",
+            "md:p-0",
+            "lg:text-center",
             "cursor-pointer",
             styles["dropDown"]
           )}
           data-category={item.link}
-          onClick={(e) => renderDropDown(e)}
           onMouseEnter={(e) => renderDropDown(e)}
           onMouseLeave={() => setShowDropDown(false)}
         >
           <button
             className={clsx(
               "cursor-pointer",
-              "mt-2.5",
+              "mt-3",
               "p-0",
               "relative",
               "box-boarder",
+              "text-left",
+              "w-11/12",
+              "md:w-auto",
               "border-none",
               "bg-transparent",
               styles["dropbtn"]
             )}
+            data-category={item.link}
+            onClick={(e) => renderDropDown(e)}
           >
             {item.link}
           </button>
@@ -71,8 +77,18 @@ const Header = ({ mainHeader, subHeader }) => {
         </div>
       </div>
 
-      <div className="w-full relative bg-regal-gray">
-        <div className="max-w-4xl my-0 mx-auto overflow-hidden flex z-10 text-sm">
+      <div
+        className={clsx(
+          "w-full",
+          "relative",
+          "bg-regal-gray",
+          "pl-2",
+          "pb-4",
+          "lg:pb-0",
+          "lg:pl-0"
+        )}
+      >
+        <div className="w-full lg:max-w-4xl my-0 mx-auto overflow-hidden md:flex z-10 text-sm">
           {theSubHeader}
         </div>
       </div>
