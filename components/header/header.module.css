@@ -41,35 +41,10 @@
   padding: 0 2rem;
 }
 
-.dropDownContent {
-  display: none;
-  position: absolute;
-  background-color: transparent;
-  width: 100%;
-  z-index: 1;
-  left: 0;
-  opacity: 0;
-  transform: translateY(-100%);
-  transition: all 0.5s ease-out;
-  padding: 0 10%;
-}
-
 .dropbtn::after {
   content: "\2303";
   position: absolute;
-  right: -17px;
-  top: 13px;
+  right: -13px;
+  top: -1px;
   transform: rotate(180deg);
 }
-
-.dropDown:hover .dropDownContent {
-  display: block;
-  opacity: 1;
-  transform: translateY(0px);
-}
-
-.dropDownColSection ul li:last-child a {
-  font-weight: bold;
-  line-height: 40px;
-}
-

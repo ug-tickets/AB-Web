@@ -1,0 +1,14 @@
+.dropDownContent {
+  position: absolute;
+  background-color: transparent;
+  width: 100%;
+  z-index: 1;
+  left: 0;
+  transition: all 0.5s ease-out;
+  padding: 0 10%;
+}
+
+.dropDownColSection ul li:last-child a {
+  font-weight: bold;
+  line-height: 40px;
+}
