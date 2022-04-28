@@ -1,62 +1,66 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./header.module.css";
+import clsx from "clsx";
+import { DropDownContent } from "./drop-down-content";
 
 const Header = ({ mainHeader, subHeader }) => {
+  const [showDropDown, setShowDropDown] = useState(false);
+  const [currentCategory, setCurrentCategory] = useState(null);
+
+  const renderDropDown = (e) => {
+    setCurrentCategory(e.target.dataset.category);
+    setShowDropDown(true);
+  };
   const theSubHeader = subHeader.map((item, i) => (
     <>
       {!item.columns ? (
-        <div key={i} className={styles.topLink}>
+        <div key={i} className="h-11 pt-3 flex-1 lg:text-center">
           <a href={item.url}>{item.link}</a>
         </div>
       ) : (
-        <div className={`${styles.dropDown}`}>
-          <button className={`${styles.dropbtn} ${styles.toggleable}`}>
+        <div
+          key={i}
+          className={clsx(
+            "flex-1",
+            "md:mx-3",
+            "pb-3",
+            "md:p-0",
+            "lg:text-center",
+            "cursor-pointer",
+            styles["dropDown"]
+          )}
+          data-category={item.link}
+          onMouseEnter={(e) => renderDropDown(e)}
+          onMouseLeave={() => setShowDropDown(false)}
+        >
+          <button
+            className={clsx(
+              "cursor-pointer",
+              "mt-3",
+              "p-0",
+              "relative",
+              "box-boarder",
+              "text-left",
+              "w-11/12",
+              "md:w-auto",
+              "border-none",
+              "bg-transparent",
+              styles["dropbtn"]
+            )}
+            data-category={item.link}
+            onClick={(e) => renderDropDown(e)}
+          >
             {item.link}
           </button>
-
-          <div className={`${styles.dropDownContent}`}>
-            <div className={styles.dropDownRow}>
-              {item.columns.map((col, j) => (
-                <div key={j} className={styles.dropDownCol}>
-                  {col.rows.map((row, k) => (
-                    <div key={k} className={styles.dropDownColSection}>
-                      <div className={styles.colHeader}>{row.colHeader}</div>
-                      <ul>
-                        {row.subLinks.map((subLnk, l) => (
-                          <li key={l}>
-                            <a href={subLnk.url}>{subLnk.link}</a>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              ))}
-              {item.deal && (
-                <div
-                  className={styles.dropDownCol}
-                  style={{ background: `${item.deal.dealBg}` }}
-                >
-                  <div className={styles.dropDownColImg}>
-                    <div>{item.deal.title}</div>
-                    <div>{item.deal.subTitle}</div>
-                    <a href={item.deal.btnUrl}>
-                      <button>{item.deal.btnTxt}</button>
-                    </a>
-                    <div className={styles.dealImg}>
-                      <img src={item.deal.dealImg} alt="deal_img" />
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
+          {showDropDown && (
+            <DropDownContent item={item} category={currentCategory} />
+          )}
         </div>
       )}
     </>
   ));
   return (
-    <div>
+    <>
       <div className={styles.header}>
         <div className={styles.headerInner}>
           <div className={styles.logo}>Logo</div>
@@ -73,10 +77,22 @@ const Header = ({ mainHeader, subHeader }) => {
         </div>
       </div>
 
-      <div className={styles.subHeader}>
-        <div className={styles.navBar}>{theSubHeader}</div>
+      <div
+        className={clsx(
+          "w-full",
+          "relative",
+          "bg-regal-gray",
+          "pl-2",
+          "pb-4",
+          "lg:pb-0",
+          "lg:pl-0"
+        )}
+      >
+        <div className="w-full lg:max-w-4xl my-0 mx-auto overflow-hidden md:flex z-10 text-sm">
+          {theSubHeader}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
