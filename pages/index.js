@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { Header } from "../components/header";
+import { Slider } from "../components/slider";
 
 export default function Home({ header }) {
   return (
@@ -17,9 +18,7 @@ export default function Home({ header }) {
       <Header {...header} />
       <div className={styles.container}>
         <main className={styles.main}>
-          <h1 className={styles.title}>
-            Welcome to <a href="#">The African Books Site</a>
-          </h1>
+          <Slider />
         </main>
 
         <footer className={styles.footer}>
