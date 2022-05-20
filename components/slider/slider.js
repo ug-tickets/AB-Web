@@ -63,6 +63,7 @@ const Slider = () => {
             height: "100%",
             width: `${allSlidesWidth}%`,
             transform: `translateX(-${count}%)`,
+            transition: "all 0.5s",
           }}
         >
           {ImagesArr.map((s) => (
