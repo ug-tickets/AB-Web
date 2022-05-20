@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import styles from "./slider.module.css";
-import clsx from "clsx";
-import { Slide } from "./slide";
+import Slide from "./slide";
 
 const Slider = () => {
   const sliderImagesArr = [
@@ -38,32 +37,35 @@ const Slider = () => {
       bookImg: "images/slide4.jpeg",
     },
   ];
-  const transformBy = 100 / sliderImagesArr.length;
+  const getSliderImages = useCallback(() => {
+    return sliderImagesArr;
+  }, []);
+  const ImagesArr = getSliderImages();
+  const transformBy = 100 / ImagesArr.length;
   const [count, setCount] = useState(transformBy);
   const prev = () => {
     if (count === 0) return;
     setCount((c) => (c -= transformBy));
   };
   const nex = () => {
-    if (count >= 100 - transformBy) return;
+    if (count === 100 - transformBy) return;
     setCount((c) => (c += transformBy));
   };
-  const allSlidesWidth = `${100 * sliderImagesArr.length}`;
+  const allSlidesWidth = `${100 * ImagesArr.length}`;
   return (
     <div className={styles.carousel}>
       <div className={styles.prev} onClick={prev}></div>
       <div className={styles.next} onClick={nex}></div>
       <div className={styles.slider}>
         <div
-          className={clsx(
-            "flex",
-            "h-full",
-            `w-[${allSlidesWidth}%]`,
-            `transform -translate-x-[${count}%]`,
-            styles["sectionWrapper"]
-          )}
+          style={{
+            display: "flex",
+            height: "100%",
+            width: `${allSlidesWidth}%`,
+            transform: `translateX(-${count}%)`,
+          }}
         >
-          {sliderImagesArr.map((s) => (
+          {ImagesArr.map((s) => (
             <Slide details={s} />
           ))}
         </div>

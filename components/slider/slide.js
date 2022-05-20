@@ -21,4 +21,4 @@ const Slide = ({ details }) => {
   );
 };
 
-export { Slide };
+export default React.memo(Slide);

@@ -15,7 +15,7 @@ export default function Home({ header }) {
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <link rel="icon" href="/favicomn.ico" />
       </Head>
-      <Header {...header} />
+      <Header />
       <div className={styles.container}>
         <main className={styles.main}>
           <Slider />
@@ -27,14 +27,4 @@ export default function Home({ header }) {
       </div>
     </>
   );
-}
-
-export async function getStaticProps() {
-  const res = await fetch("http://localhost:4000/Header");
-  const response = await res.json();
-  return {
-    props: {
-      header: response,
-    },
-  };
 }

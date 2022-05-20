@@ -8,6 +8,7 @@
   height: 100%;
   width: 70%;
   margin: 0 auto;
+  position: relative;
 }
 .slider section {
   text-align: center;
@@ -16,7 +17,7 @@
 .next {
   width: 40px;
   height: 40px;
-  background: red;
+  background: white;
   border-radius: 50%;
   position: absolute;
   z-index: 1;
@@ -29,7 +30,7 @@
 .prev {
   width: 40px;
   height: 40px;
-  background: blue;
+  background: white;
   border-radius: 50%;
   position: absolute;
   z-index: 1;
