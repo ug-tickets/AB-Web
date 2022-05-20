@@ -54,9 +54,9 @@ const Slider = () => {
   const allSlidesWidth = `${100 * ImagesArr.length}`;
   return (
     <div className={styles.carousel}>
-      <div className={styles.prev} onClick={prev}></div>
-      <div className={styles.next} onClick={nex}></div>
       <div className={styles.slider}>
+        <div className={styles.prev} onClick={prev}></div>
+        <div className={styles.next} onClick={nex}></div>
         <div
           style={{
             display: "flex",

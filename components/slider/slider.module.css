@@ -21,8 +21,8 @@
   border-radius: 50%;
   position: absolute;
   z-index: 1;
-  top: 33%;
-  right: 20%;
+  top: 42%;
+  right: 2%;
   cursor: pointer;
   padding-top: 2px;
   transform: rotate(90deg);
@@ -34,8 +34,8 @@
   border-radius: 50%;
   position: absolute;
   z-index: 1;
-  top: 33%;
-  left: 20%;
+  top: 42%;
+  left: 2%;
   cursor: pointer;
   padding-top: 1px;
   transform: rotate(-90deg);
