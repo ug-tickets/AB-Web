@@ -1,6 +1,7 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useMemo } from "react";
 import styles from "./slider.module.css";
 import Slide from "./slide";
+import clsx from "clsx";
 
 const Slider = () => {
   const sliderImagesArr = [
@@ -37,10 +38,7 @@ const Slider = () => {
       bookImg: "images/slide4.jpeg",
     },
   ];
-  const getSliderImages = useCallback(() => {
-    return sliderImagesArr;
-  }, []);
-  const ImagesArr = getSliderImages();
+  const ImagesArr = useMemo(() => sliderImagesArr, []);
   const transformBy = 100 / ImagesArr.length;
   const [count, setCount] = useState(transformBy);
   const prev = () => {
@@ -54,7 +52,7 @@ const Slider = () => {
   const allSlidesWidth = `${100 * ImagesArr.length}`;
   return (
     <div className={styles.carousel}>
-      <div className={styles.slider}>
+      <div className={clsx("h-full", "w-full", "md:w-[70%]", styles["slider"])}>
         <div className={styles.prev} onClick={prev}></div>
         <div className={styles.next} onClick={nex}></div>
         <div
