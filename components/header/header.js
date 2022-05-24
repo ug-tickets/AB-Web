@@ -1,64 +1,74 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./header.module.css";
 import clsx from "clsx";
 import { DropDownContent } from "./drop-down-content";
 
-const Header = ({ mainHeader, subHeader }) => {
+const Header = () => {
   const [showDropDown, setShowDropDown] = useState(false);
   const [currentCategory, setCurrentCategory] = useState(null);
+  const [subHeader, setSubHeader] = useState(null);
+
+  useEffect(() => {
+    (async () => {
+      const { Header } = require("./db.json");
+      setSubHeader(Header.subHeader);
+    })();
+  }, []);
 
   const renderDropDown = (e) => {
     setCurrentCategory(e.target.dataset.category);
     setShowDropDown(true);
   };
-  const theSubHeader = subHeader.map((item, i) => (
-    <>
-      {!item.columns ? (
-        <div key={i} className="h-11 pt-3 flex-1 lg:text-center">
-          <a href={item.url}>{item.link}</a>
-        </div>
-      ) : (
-        <div
-          key={i}
-          className={clsx(
-            "flex-1",
-            "md:mx-3",
-            "pb-3",
-            "md:p-0",
-            "lg:text-center",
-            "cursor-pointer",
-            styles["dropDown"]
-          )}
-          data-category={item.link}
-          onMouseEnter={(e) => renderDropDown(e)}
-          onMouseLeave={() => setShowDropDown(false)}
-        >
-          <button
+  const theSubHeader =
+    subHeader &&
+    subHeader.map((item, i) => (
+      <>
+        {!item.columns ? (
+          <div key={i} className="h-11 pt-3 flex-1 lg:text-center">
+            <a href={item.url}>{item.link}</a>
+          </div>
+        ) : (
+          <div
+            key={i}
             className={clsx(
+              "flex-1",
+              "md:mx-3",
+              "pb-3",
+              "md:p-0",
+              "lg:text-center",
               "cursor-pointer",
-              "mt-3",
-              "p-0",
-              "relative",
-              "box-boarder",
-              "text-left",
-              "w-11/12",
-              "md:w-auto",
-              "border-none",
-              "bg-transparent",
-              styles["dropbtn"]
+              styles["dropDown"]
             )}
             data-category={item.link}
-            onClick={(e) => renderDropDown(e)}
+            onMouseEnter={(e) => renderDropDown(e)}
+            onMouseLeave={() => setShowDropDown(false)}
           >
-            {item.link}
-          </button>
-          {showDropDown && (
-            <DropDownContent item={item} category={currentCategory} />
-          )}
-        </div>
-      )}
-    </>
-  ));
+            <button
+              className={clsx(
+                "cursor-pointer",
+                "mt-3",
+                "p-0",
+                "relative",
+                "box-boarder",
+                "text-left",
+                "w-11/12",
+                "md:w-auto",
+                "border-none",
+                "bg-transparent",
+                styles["dropbtn"]
+              )}
+              data-category={item.link}
+              onClick={(e) => renderDropDown(e)}
+            >
+              {item.link}
+            </button>
+            {showDropDown && (
+              <DropDownContent item={item} category={currentCategory} />
+            )}
+          </div>
+        )}
+      </>
+    ));
   return (
     <>
       <div className={styles.header}>

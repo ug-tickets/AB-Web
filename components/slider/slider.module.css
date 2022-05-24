@@ -1,0 +1,50 @@
+.carousel {
+  width: 100vw;
+  height: 350px;
+  position: inherit;
+  overflow: hidden;
+}
+.slider {
+  margin: 0 auto;
+  position: relative;
+}
+.slider section {
+  text-align: center;
+  flex: 1;
+}
+.next {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  top: 42%;
+  right: 2%;
+  cursor: pointer;
+  padding-top: 2px;
+  transform: rotate(90deg);
+}
+.prev {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  top: 42%;
+  left: 2%;
+  cursor: pointer;
+  padding-top: 1px;
+  transform: rotate(-90deg);
+}
+.next::before {
+  content: "\2303";
+  margin-left: 8px;
+  font-size: 30px;
+}
+.prev::before {
+  content: "\2303";
+  margin-left: 8px;
+  font-size: 30px;
+}

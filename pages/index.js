@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { Header } from "../components/header";
+import { Slider } from "../components/slider";
 
 export default function Home({ header }) {
   return (
@@ -14,12 +15,10 @@ export default function Home({ header }) {
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <link rel="icon" href="/favicomn.ico" />
       </Head>
-      <Header {...header} />
+      <Header />
       <div className={styles.container}>
         <main className={styles.main}>
-          <h1 className={styles.title}>
-            Welcome to <a href="#">The African Books Site</a>
-          </h1>
+          <Slider />
         </main>
 
         <footer className={styles.footer}>
@@ -28,14 +27,4 @@ export default function Home({ header }) {
       </div>
     </>
   );
-}
-
-export async function getStaticProps() {
-  const res = await fetch("http://localhost:4000/Header");
-  const response = await res.json();
-  return {
-    props: {
-      header: response,
-    },
-  };
 }
