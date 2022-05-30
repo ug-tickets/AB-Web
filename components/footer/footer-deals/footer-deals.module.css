@@ -1,0 +1,17 @@
+.footer-deal-img {
+  width: 70%;
+  height: 100%;
+  position: relative;
+}
+.sale-tag {
+  background-color: #fec107;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  line-height: 2px;
+  padding-top: 16px;
+  position: absolute;
+  right: -30px;
+  top: -20px;
+}
