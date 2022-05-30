@@ -103,6 +103,23 @@
   margin-left: 0.5rem;
 }
 
+.bookSlider {
+  width: 100%;
+  height: 280px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 3%;
+  margin-bottom: 20px;
+}
+.bookSliderBook {
+  width: 120px;
+  height: 100%;
+}
+.bookSliderBook img {
+  width: 100%;
+  height: 165px;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

@@ -23,6 +23,68 @@ export default function Home() {
     allLinkUrl: "/categories/book",
     linkTxt: "View All",
   };
+  const sliderBooks = [
+    {
+      title: "The Haunter Of The Dark",
+      author: "H.P Lovercraft",
+      price: "$20",
+      rating: "4.05",
+      imgUrl: "images/haunter.jpeg",
+    },
+    {
+      title: "The Haunter Of The Dark",
+      author: "H.P Lovercraft",
+      price: "$20",
+      rating: "4.05",
+      imgUrl: "images/poetics.jpeg",
+    },
+    {
+      title: "The Prophet",
+      author: "Kahlil Gibran",
+      price: "$25",
+      rating: "4.05",
+      imgUrl: "images/prophet.jpeg",
+    },
+    {
+      title: "The Invisible Giant",
+      author: "Bram Stoker",
+      price: "$20",
+      rating: "4.05",
+      imgUrl: "images/slide2.jpeg",
+    },
+    {
+      title: "The Haunter Of The Dark",
+      author: "H.P Lovercraft",
+      price: "$20",
+      rating: "4.05",
+      imgUrl: "images/slide3.jpeg",
+    },
+    {
+      title: "The Arrow",
+      author: "Sumita Chakhaborty",
+      price: "$20",
+      rating: "4.05",
+      imgUrl: "images/arrow.jpeg",
+    },
+    {
+      title: "Thinking",
+      author: "Daniel Kahneman",
+      price: "$10",
+      rating: "4.05",
+      imgUrl: "images/thinking.jpeg",
+    },
+  ];
+  const slides = sliderBooks.map((book, i) => (
+    <div key={i} className={styles["bookSliderBook"]}>
+      <img src={book.imgUrl} />
+      <div className="pt-4 pl-2 pb-3 pr-1 bg-white">
+        <div className="font-medium truncate text-[14px]">{book.title}</div>
+        <div className="font-light text-[10px] truncate">{book.author}</div>
+        <div className="font-semibold mt-1 mb-3">{book.price}</div>
+        <div className="font-light text-[10px]">{book.rating}</div>
+      </div>
+    </div>
+  ));
   return (
     <>
       <Head>
@@ -37,11 +99,49 @@ export default function Home() {
       <div className={styles.container}>
         <main className={styles.main}>
           <Slider />
-          <MainBody>
-            <Headings options={headerOptions1} />
-            <Headings options={headerOptions2} />
-            <Headings options={headerOptions3} />
-          </MainBody>
+          <div className="w-full py-5">
+            <MainBody>
+              <Headings options={headerOptions1} />
+              <div className="flex flex-wrap justify-center pl-[3%]">
+                <div className="w-32 md:flex-1 bg-[#99E6FC] bg-opacity-[0.06] h-24">
+                  <div className="h-16 text-center"> </div>
+                  <div className="py-3 text-center text-[10px]">Mystery</div>
+                </div>
+                <div className="w-32 md:flex-1 bg-[#040404] bg-opacity-[0.06] h-24">
+                  <div className="h-16 text-center"> </div>
+                  <div className="py-3 text-center text-[10px]">Classics</div>
+                </div>
+                <div className="w-32 md:flex-1 bg-[#DF646E] bg-opacity-[0.06] h-24">
+                  <div className="h-16 text-center"> </div>
+                  <div className="py-3 text-center text-[10px]">Poetry</div>
+                </div>
+                <div className="w-32 md:flex-1 bg-[#470082] bg-opacity-[0.06] h-24">
+                  <div className="h-16 text-center"> </div>
+                  <div className="py-3 text-center text-[10px]">Horror</div>
+                </div>
+                <div className="w-32 md:flex-1 bg-[#FFD064] bg-opacity-[0.06] h-24">
+                  <div className="h-16 text-center"> </div>
+                  <div className="py-3 text-center text-[10px]">Historical</div>
+                </div>
+                <div className="w-32 md:flex-1 bg-[#FF3E61] bg-opacity-[0.06] h-24">
+                  <div className="h-16 text-center"> </div>
+                  <div className="py-3 text-center text-[10px]">Romance</div>
+                </div>
+              </div>
+            </MainBody>
+          </div>
+          <div className="w-full py-5">
+            <MainBody>
+              <Headings options={headerOptions2} />
+              <div className={styles["bookSlider"]}>{slides}</div>
+            </MainBody>
+          </div>
+          <div className="w-full bg-[#E5E5E5] bg-opacity-[0.5] pb-9 pt-[2px]">
+            <MainBody>
+              <Headings options={headerOptions3} />
+              <div className={styles["bookSlider"]}>{slides}</div>
+            </MainBody>
+          </div>
         </main>
 
         <Footer />
