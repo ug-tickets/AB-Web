@@ -26,7 +26,9 @@ const Slide = ({ details }) => {
         </div>
         <div className="text-xs text-white">Author: {details.author}</div>
         <a href={details.bookLnk}>
-          <button>View Details</button>
+          <button className="my-5 bg-white w-48 cursor-pointer rounded-3xl text-black text-center font-normal uppercase">
+            View Details
+          </button>
         </a>
       </div>
     </section>
