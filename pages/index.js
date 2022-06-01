@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { Header } from "../components/header";
@@ -6,6 +6,7 @@ import { Slider } from "../components/slider";
 import { MainBody } from "../components/shared/main-body";
 import { Headings } from "../components/shared/headings";
 import { Footer } from "../components/footer";
+import { BookSlider } from "../components/bookSlider";
 
 export default function Home() {
   const headerOptions1 = {
@@ -73,18 +74,22 @@ export default function Home() {
       rating: "4.05",
       imgUrl: "images/thinking.jpeg",
     },
+    {
+      title: "The Invisible Giant",
+      author: "Bram Stoker",
+      price: "$20",
+      rating: "4.05",
+      imgUrl: "images/slide2.jpeg",
+    },
+    {
+      title: "The Prophet",
+      author: "Kahlil Gibran",
+      price: "$25",
+      rating: "4.05",
+      imgUrl: "images/prophet.jpeg",
+    },
   ];
-  const slides = sliderBooks.map((book, i) => (
-    <div key={i} className={styles["bookSliderBook"]}>
-      <img src={book.imgUrl} />
-      <div className="pt-4 pl-2 pb-3 pr-1 bg-white">
-        <div className="font-medium truncate text-[14px]">{book.title}</div>
-        <div className="font-light text-[10px] truncate">{book.author}</div>
-        <div className="font-semibold mt-1 mb-3">{book.price}</div>
-        <div className="font-light text-[10px]">{book.rating}</div>
-      </div>
-    </div>
-  ));
+
   return (
     <>
       <Head>
@@ -133,13 +138,13 @@ export default function Home() {
           <div className="w-full py-5">
             <MainBody>
               <Headings options={headerOptions2} />
-              <div className={styles["bookSlider"]}>{slides}</div>
+              <BookSlider sliderBooks={sliderBooks} />
             </MainBody>
           </div>
           <div className="w-full bg-[#E5E5E5] bg-opacity-[0.5] pb-9 pt-[2px]">
             <MainBody>
               <Headings options={headerOptions3} />
-              <div className={styles["bookSlider"]}>{slides}</div>
+              <BookSlider sliderBooks={sliderBooks} />
             </MainBody>
           </div>
         </main>
