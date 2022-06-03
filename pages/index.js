@@ -135,13 +135,13 @@ export default function Home() {
               </div>
             </MainBody>
           </div>
-          <div className="w-full pb-2 pt-[2px]">
+          <div className="w-full pb-0 pt-[2px]">
             <MainBody>
               <Headings options={headerOptions2} />
               <BookSlider sliderBooks={sliderBooks} />
             </MainBody>
           </div>
-          <div className="w-full bg-[#E5E5E5] bg-opacity-[0.5] pb-8 pt-[2px]">
+          <div className="w-full bg-[#E5E5E5] bg-opacity-[0.5] pb-5 pt-[2px]">
             <MainBody>
               <Headings options={headerOptions3} />
               <BookSlider sliderBooks={sliderBooks} />

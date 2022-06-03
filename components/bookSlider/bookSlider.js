@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import styles from "./book-slider.module.css";
+import clsx from "clsx";
 
 const BookSlider = ({ sliderBooks }) => {
   if (!sliderBooks) return <></>;
@@ -19,12 +20,17 @@ const BookSlider = ({ sliderBooks }) => {
   ));
   const [hiddenPart, setHiddenPart] = useState(null);
   const [translateBy, setTranslateBy] = useState(0);
+  const [hideArrow, sethideArrow] = useState(true);
   const sliderMonitor = useRef(0);
   useEffect(() => {
+    innerSliderWidth > outerSliderWidth.current.offsetWidth
+      ? sethideArrow(false)
+      : sethideArrow(true);
+
     if (!hiddenPart) {
       setHiddenPart(innerSliderWidth - outerSliderWidth.current.offsetWidth);
     }
-  }, []);
+  }, [innerSliderWidth]);
   const prvFunc = () => {
     if (translateBy === 0) return;
     setTranslateBy((c) => (c -= sliderMonitor.current));
@@ -44,9 +50,26 @@ const BookSlider = ({ sliderBooks }) => {
     }
   };
   return (
-    <div className={styles["bookSlider"]} ref={outerSliderWidth}>
-      <div className={styles["prv"]} onClick={prvFunc}></div>
-      <div className={styles["nxt"]} onClick={nxtFunc}></div>
+    <div
+      style={{
+        width: "100%",
+        height: "290px",
+        "margin-bottom": "20px",
+        position: "relative",
+        overflow: "hidden",
+        display: "flex",
+        justifyContent: hideArrow ? "center" : "",
+      }}
+      ref={outerSliderWidth}
+    >
+      <div
+        className={`${styles["prv"]} ${hideArrow && "visibility: hidden"}`}
+        onClick={prvFunc}
+      ></div>
+      <div
+        className={`${styles["nxt"]} ${hideArrow && "visibility: hidden"}`}
+        onClick={nxtFunc}
+      ></div>
       <div
         style={{
           height: "100%",

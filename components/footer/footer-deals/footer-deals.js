@@ -7,19 +7,19 @@ const FooterDeals = () => {
   const remain = 10;
   const progress = (sold / (sold + remain)) * 100;
   return (
-    <div className="md:flex h-auto px-5 align-center justify-center md:px-[13%]">
-      <div className="flex-1 md:py-10 py-3 leading-10 w-[350px]">
+    <div className="md:flex flex-wrap h-auto px-5 align-center justify-center md:px-[0%]">
+      <div className="md:py-10 py-3 leading-5 w-[300px]">
         <div className="text-[10px] uppercase my-3">
           Hurry before offer ends
         </div>
         <div className="text-3xl my-1">
           Limited Week <div className="font-semibold my-2">Deal</div>
         </div>
-        <div className="my-5 bg-white w-48 cursor-pointer rounded-3xl text-black text-center text-[10px] font-normal uppercase">
+        <div className="my-5 py-2 bg-white w-48 cursor-pointer rounded-3xl text-black text-center text-[10px] font-normal uppercase">
           View Details
         </div>
       </div>
-      <div className="flex-1 md:px-10 md:py-5 w-[300px]">
+      <div className="md:px-5 md:py-5 w-[300px]">
         <div className={styles["footer-deal-img"]}>
           <img src="images/boundless.jpeg" />
           <div className={styles["sale-tag"]}>
@@ -28,7 +28,7 @@ const FooterDeals = () => {
           </div>
         </div>
       </div>
-      <div className="flex-1 md:py-10 py-5 font-light w-[300px] text-[11px]">
+      <div className="md:py-10 py-5 font-light w-[300px] text-[11px]">
         <div className="mb-4 md:mt-6">
           <span className="font-medium text-2xl">$15</span> &nbsp;
           <span className="font-medium">$77.96</span>

@@ -1,13 +1,3 @@
-.bookSlider {
-  width: 100%;
-  height: 290px;
-  /* display: flex;
-  justify-content: space-between;
-  padding-left: 3%;*/
-  margin-bottom: 20px;
-  position: relative;
-  overflow: hidden;
-}
 .bookSliderBook {
   width: 120px;
   height: 100%;
