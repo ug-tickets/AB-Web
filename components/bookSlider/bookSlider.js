@@ -10,7 +10,7 @@ const BookSlider = ({ sliderBooks }) => {
   const slides = sliderBooks.map((book, i) => (
     <div key={i} className={styles["bookSliderBook"]}>
       <img src={book.imgUrl} />
-      <div className="pt-3 pl-2 pb-3 pr-1 bg-white">
+      <div className="py-2 pl-2 pr-1 bg-white">
         <div className="font-medium truncate text-[14px]">{book.title}</div>
         <div className="font-light text-[10px] truncate">{book.author}</div>
         <div className="font-semibold mt-1 mb-3">{book.price}</div>

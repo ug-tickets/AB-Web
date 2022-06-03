@@ -91,7 +91,7 @@ export default function Home() {
   ];
 
   return (
-    <>
+    <div>
       <Head>
         <title>AB SITE</title>
         <meta name="description" content="African books site" />
@@ -108,28 +108,57 @@ export default function Home() {
             <MainBody>
               <Headings options={headerOptions1} />
               <div className="flex flex-wrap justify-center pl-[3%]">
-                <div className="w-32 md:flex-1 bg-[#99E6FC] bg-opacity-[0.06] h-24">
-                  <div className="h-16 text-center"> </div>
+                <div className="w-32 md:flex-1 bg-[#99E6FC] bg-opacity-[0.09] h-24">
+                  <div className="h-16 text-center">
+                    <div className="pt-7 pl-1 flex justify-center">
+                      <img src="images/comedy.svg" className="w-9 h-9" />
+                    </div>
+                  </div>
                   <div className="py-3 text-center text-[10px]">Mystery</div>
                 </div>
-                <div className="w-32 md:flex-1 bg-[#040404] bg-opacity-[0.06] h-24">
-                  <div className="h-16 text-center"> </div>
+                <div className="w-32 md:flex-1 bg-[#040404] bg-opacity-[0.09] h-24">
+                  <div className="h-16 text-center">
+                    <div className="pt-7 pl-1 flex justify-center">
+                      <img src="images/classic-car.svg" className="w-9 h-9" />
+                    </div>{" "}
+                  </div>
                   <div className="py-3 text-center text-[10px]">Classics</div>
                 </div>
-                <div className="w-32 md:flex-1 bg-[#DF646E] bg-opacity-[0.06] h-24">
-                  <div className="h-16 text-center"> </div>
+                <div className="w-32 md:flex-1 bg-[#DF646E] bg-opacity-[0.09] h-24">
+                  <div className="h-16 text-center">
+                    <div className="pt-7 pl-1 flex justify-center">
+                      <img
+                        src="images/adventure-game.svg"
+                        className="w-9 h-9"
+                      />
+                    </div>{" "}
+                  </div>
                   <div className="py-3 text-center text-[10px]">Poetry</div>
                 </div>
-                <div className="w-32 md:flex-1 bg-[#470082] bg-opacity-[0.06] h-24">
-                  <div className="h-16 text-center"> </div>
+                <div className="w-32 md:flex-1 bg-[#470082] bg-opacity-[0.09] h-24">
+                  <div className="h-16 text-center">
+                    <div className="pt-7 pl-1 flex justify-center">
+                      <img src="images/zombie.svg" className="w-9 h-9" />
+                    </div>{" "}
+                  </div>
                   <div className="py-3 text-center text-[10px]">Horror</div>
                 </div>
-                <div className="w-32 md:flex-1 bg-[#FFD064] bg-opacity-[0.06] h-24">
-                  <div className="h-16 text-center"> </div>
+                <div className="w-32 md:flex-1 bg-[#FFD064] bg-opacity-[0.09] h-24">
+                  <div className="h-16 text-center">
+                    {" "}
+                    <div className="pt-7 pl-1 flex justify-center">
+                      <img src="images/parchment.svg" className="w-9 h-9" />
+                    </div>
+                  </div>
                   <div className="py-3 text-center text-[10px]">Historical</div>
                 </div>
-                <div className="w-32 md:flex-1 bg-[#FF3E61] bg-opacity-[0.06] h-24">
-                  <div className="h-16 text-center"> </div>
+                <div className="w-32 md:flex-1 bg-[#FF3E61] bg-opacity-[0.09] h-24">
+                  <div className="h-16 text-center">
+                    {" "}
+                    <div className="pt-7 pl-1 flex justify-center">
+                      <img src="images/hearts.svg" className="w-9 h-9" />
+                    </div>
+                  </div>
                   <div className="py-3 text-center text-[10px]">Romance</div>
                 </div>
               </div>
@@ -151,6 +180,6 @@ export default function Home() {
 
         <Footer />
       </div>
-    </>
+    </div>
   );
 }

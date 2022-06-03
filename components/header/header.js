@@ -73,17 +73,27 @@ const Header = () => {
     <>
       <div className={styles.header}>
         <div className={styles.headerInner}>
-          <div className={styles.logo}>Logo</div>
-          <div className={styles.searchBar}>
-            <input
-              type="text"
-              placeholder="Search book by author or publisher"
-              className={styles.input}
-            />
+          <div className={clsx("w-[510px]", "sm:w-[250px]", styles["logo"])}>
+            <img src="images/logo.svg" />
           </div>
-          <div className={styles.faq}>FAQ</div>
-          <div className={styles.login}>LogIn</div>
-          <div className={styles.cart}>Cart</div>
+          <div className={clsx("hidden", "sm:block", styles["searchBar"])}>
+            <span className="relative">
+              <input
+                type="text"
+                placeholder="Search book by author or publisher"
+                className={styles.input}
+              />
+              <div className={styles.searchico}>
+                <img src="images/search.svg" />
+              </div>
+            </span>
+          </div>
+          <div className={styles.login}>
+            <img src="images/acc.svg" />
+          </div>
+          <div className={styles.cart}>
+            <img src="images/cart.png" />
+          </div>
         </div>
       </div>
 

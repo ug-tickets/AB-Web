@@ -9,33 +9,61 @@
   display: flex;
 }
 .logo {
-  width: 250px;
-  padding: 5px;
+  cursor: pointer;
+}
+.logo img {
+  width: 135px;
+  height: auto;
 }
 .searchBar {
-  width: 550px;
   padding: 0 10px;
+  width: 550px;
   margin-top: 0px;
 }
-.faq {
-  width: 50px;
-  padding: 10px 5px 5px 5px;
-}
+
 .login {
-  width: 100px;
-  padding: 10px 5px 5px 5px;
+  width: 58px;
+  padding: 6px 5px 5px 5px;
+  position: relative;
+  cursor: pointer;
+}
+.login img {
+  width: 21px;
+  height: auto;
+}
+.login::after {
+  content: "\2303";
+  position: absolute;
+  right: 18px;
+  top: 4px;
+  transform: rotate(180deg);
+  transition: all 0.1s;
 }
 .cart {
   width: 70px;
   padding: 10px 5px 5px 5px;
+  cursor: pointer;
+}
+.cart img {
+  width: 17px;
+  height: auto;
 }
 .input {
   border: solid 1px #e6e6e6;
-  padding: 7px 5px 7px 20px;
+  padding: 7px 25px 7px 15px;
   width: 400px;
   border-radius: 20px;
   font-size: 12px;
   outline: none;
+}
+.searchico {
+  position: absolute;
+  right: 6px;
+  top: -3.5px;
+}
+.searchico img {
+  width: 25px;
+  height: auto;
 }
 .container {
   padding: 0 2rem;
@@ -47,4 +75,9 @@
   right: -13px;
   top: -1px;
   transform: rotate(180deg);
+  transition: all 0.1s;
 }
+/* .dropbtn:hover::after {
+  transform: rotate(0deg);
+  top: 3px;
+} */
