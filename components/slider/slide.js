@@ -9,7 +9,7 @@ const Slide = ({ details }) => {
         flex: "1",
         background: `url(${details.bookImg})`,
         "background-repeat": "no-repeat",
-        "background-size": "cover",
+        backgroundSize: "cover",
         "background-position": "bottom",
       }}
     >
