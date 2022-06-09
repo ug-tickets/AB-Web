@@ -7,10 +7,10 @@ const Slide = ({ details }) => {
       style={{
         display: "flex",
         flex: "1",
-        background: `url(images/Mosaic.png), url(${details.bookImg})`,
-        "background-repeat": "repeat, no-repeat",
-        backgroundSize: "contain, cover",
-        "background-position": "0%, bottom",
+        background: `url(${details.bookImg})`,
+        "background-repeat": "no-repeat",
+        backgroundSize: "cover",
+        "background-position": "bottom",
       }}
     >
       <div className={styles.sliderSnippet}>

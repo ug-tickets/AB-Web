@@ -2,7 +2,6 @@ import React, { useState, useMemo } from "react";
 import styles from "./slider.module.css";
 import Slide from "./slide";
 import clsx from "clsx";
-import { useRouter } from "next/router";
 
 const Slider = () => {
   const sliderImagesArr = [
@@ -39,7 +38,6 @@ const Slider = () => {
       bookImg: "images/slide4.jpeg",
     },
   ];
-  const router = useRouter();
   const ImagesArr = useMemo(() => sliderImagesArr, []);
   const transformBy = 100 / ImagesArr.length;
   const [count, setCount] = useState(transformBy);
@@ -48,7 +46,6 @@ const Slider = () => {
     setCount((c) => (c -= transformBy));
   };
   const nex = () => {
-    router.push("/?step=11", undefined, { shallow: true });
     if (count === 100 - transformBy) return;
     setCount((c) => (c += transformBy));
   };
