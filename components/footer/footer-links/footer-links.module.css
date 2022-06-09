@@ -1,0 +1,26 @@
+.footerLinksWrapper {
+  padding: 40px 0;
+  font-size: 10px;
+}
+.follow {
+  flex: 1;
+}
+.thelinks {
+  flex: 3;
+  border-right: solid 1px #4b4b55;
+}
+.deno {
+  padding: 20px 0;
+  display: flex;
+}
+.div1 {
+  flex: 3;
+}
+.div2 {
+  flex: 1;
+}
+.slum {
+  border: solid 1px white;
+  position: absolute;
+  bottom: 0;
+}
