@@ -20,13 +20,13 @@ const DropDownContent = ({ item, category }) => {
     >
       <div className="sm:flex bg-white border border-gray border-t-0 pl-2.5 text-xs">
         {item.columns.map((col, j) => (
-          <div key={j} className="flex-1 py-2.5 px-5">
+          <div key={j} className="py-2.5 px-5">
             {col.rows.map((row, k) => (
               <div key={k} className={styles.dropDownColSection}>
-                <div className="font-bold py-2.5 text-left">
+                <div className="font-bold py-2.5 text-[11px] text-left">
                   {row.colHeader}
                 </div>
-                <ul className="p-0 text-left">
+                <ul className="p-0 text-left text-[10px]">
                   {row.subLinks.map((subLnk, l) => (
                     <li className="leading-6 list-none" key={l}>
                       <a href={subLnk.url}>{subLnk.link}</a>
@@ -39,7 +39,7 @@ const DropDownContent = ({ item, category }) => {
         ))}
         {item.deal && (
           <div
-            className="text-left"
+            className="text-left flex-1 w-full min-h-[450px]"
             style={{ background: `${item.deal.dealBg}` }}
           >
             <div
@@ -51,8 +51,7 @@ const DropDownContent = ({ item, category }) => {
                 "pl-5",
                 "pr-5",
                 "pt-9",
-                "relative",
-                styles["dropDownColImg"]
+                "relative"
               )}
             >
               <div className="text-black font-bold text-3xl leading-8">
@@ -62,13 +61,13 @@ const DropDownContent = ({ item, category }) => {
                 {item.deal.subTitle}
               </div>
               <a href={item.deal.btnUrl}>
-                <button className="text-black border border-white py-2.5 px-6 rounded-3xl font-bold uppercase my-2.5 mx-0 bg-transparent font-inherit">
+                <button className="text-black hover:text-white py-2.5 px-6 rounded-3xl font-light uppercase my-2.5 mx-0 bg-white font-inherit hover:bg-[red]">
                   {item.deal.btnTxt}
                 </button>
               </a>
-              <div className="sm:absolute bottom-2.5 w-full sm:h-52 left-0">
+              <div className="sm:absolute bottom-15 w-full sm:h-52 left-0">
                 <img
-                  className="h-auto w-60 mx-auto sm:w-full"
+                  className="h-auto w-full sm:w-full"
                   src={item.deal.dealImg}
                   alt="deal_img"
                 />

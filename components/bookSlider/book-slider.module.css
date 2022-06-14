@@ -5,67 +5,43 @@
 }
 .bookSliderBook img {
   width: 100%;
-  height: 165px;
+  height: 160px;
 }
 .prv {
   position: absolute;
   top: 30%;
-  left: 0px;
+  left: 5px;
   z-index: 1;
   width: 40px;
-  height: 30%;
-  background: rgba(255, 255, 255, 0.541);
+  height: 40px;
+  background: rgba(255, 255, 255, 0.815);
+  border-radius: 20px;
   cursor: pointer;
+  padding-top: 3px;
+  transform: rotate(-90deg);
 }
 .nxt {
   position: absolute;
   top: 30%;
-  right: 0px;
+  right: 5px;
   z-index: 1;
-  width: 50px;
-  height: 30%;
-  background: rgba(255, 255, 255, 0.541);
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.815);
+  border-radius: 20px;
+  padding-top: 2px;
   cursor: pointer;
   overflow: hidden;
+  transform: rotate(90deg);
 }
 .nxt::before {
-  content: "";
-  position: absolute;
-  width: 68%;
-  height: 1px;
-  top: 39%;
-  right: 3px;
-  background: black;
-  transform: rotate(33deg);
-}
-.nxt::after {
-  content: "";
-  position: absolute;
-  width: 68%;
-  height: 1px;
-  bottom: 39%;
-  background: black;
-  transform: rotate(-33deg);
-  right: 3px;
+  content: "\2303";
+  margin-left: 8px;
+  font-size: 30px;
 }
 
 .prv::before {
-  content: "";
-  position: absolute;
-  width: 68%;
-  height: 1px;
-  top: 39.5%;
-  right: 1px;
-  background: black;
-  transform: rotate(-35deg);
-}
-.prv::after {
-  content: "";
-  position: absolute;
-  width: 68%;
-  height: 1px;
-  bottom: 40%;
-  background: black;
-  transform: rotate(40deg);
-  right: 1px;
+  content: "\2303";
+  margin-left: 8px;
+  font-size: 30px;
 }

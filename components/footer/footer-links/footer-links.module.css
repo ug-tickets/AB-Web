@@ -1,0 +1,19 @@
+.footerLinksWrapper {
+  padding: 40px 0;
+  font-size: 10px;
+}
+.follow {
+  flex: 1;
+}
+.thelinks {
+  flex: 3;
+}
+.div1 {
+  flex: 3;
+}
+.div2 {
+  flex: 1;
+}
+.slum {
+  margin-top: 100%;
+}
