@@ -76,7 +76,12 @@ const FooterLinks = () => {
     },
   ];
   const allLinks = (
-    <div className={clsx("flex", styles.thelinks)}>
+    <div
+      className={clsx(
+        "sm:flex mx-5 md:border-r-[1px] border-[#4B4B55]",
+        styles["thelinks"]
+      )}
+    >
       {footerColumns.map((col, i) => (
         <div key={i} className="flex-1">
           <div className="font-semibold font-light py-3">{col.heading}</div>
@@ -96,11 +101,11 @@ const FooterLinks = () => {
     <MainBody>
       <div className={styles.footerLinksWrapper}>
         <div className="border-b-[1px] border-[#4B4B55]">
-          <div className="flex">
+          <div className="md:flex">
             {allLinks}
             <div
               className={clsx(
-                "pl-16 text-sm font-semibold relative border",
+                "p-5 md:pl-10 text-sm font-semibold relative w-[200px] md:w-full",
                 styles.follow
               )}
             >
@@ -124,7 +129,7 @@ const FooterLinks = () => {
             </div>
           </div>
 
-          <div className={clsx("font-light", styles.deno)}>
+          <div className={clsx("font-light flex py-3 pl-5 md:pl-0")}>
             <div className={styles.div1}>
               <span className="text-[11px] font-bold">African Books</span> is a
               marketplace where authors, literary agents, publishers, and other
@@ -132,7 +137,7 @@ const FooterLinks = () => {
               studios, and other Producers capable of producing a finished
               audiobook. The result: More audiobooks will be made.
             </div>
-            <div className={clsx("pr-48", styles.div2)}></div>
+            <div className={clsx("md:pr-48", styles.div2)}></div>
           </div>
         </div>
       </div>
