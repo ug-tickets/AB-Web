@@ -1,0 +1,1 @@
+export { SinglePage } from "./singlepage";
