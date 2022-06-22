@@ -17,7 +17,7 @@ const SinglePage = ({ children }) => {
       </Head>
       <Header />
       <MainBody>{children}</MainBody>
-      <Footer />
+      <Footer showDeals={false} />
     </div>
   );
 };

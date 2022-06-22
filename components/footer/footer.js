@@ -4,10 +4,10 @@ import styles from "./footer.module.css";
 import { FooterDeals } from "./footer-deals";
 import { FooterLinks } from "./footer-links";
 
-const Footer = () => {
+const Footer = ({ showDeals = true }) => {
   return (
     <div className={clsx(styles["footer"])}>
-      <FooterDeals />
+      {showDeals && <FooterDeals />}
       <FooterLinks />
     </div>
   );

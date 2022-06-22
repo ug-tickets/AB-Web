@@ -1,12 +1,13 @@
 import React from "react";
 import styles from "./single-book.module.css";
+import { SingleReviews } from "./singleReviews";
 
 const SingleBook = () => {
   return (
-    <div className="text-sm font-light">
+    <div className="text-[12px] font-light">
       <div className="sm:flex flex-start mb-7">
         <div className="w-64 border h-[350px] p-3">book image</div>
-        <div className="flex-1 px-3 py-5">
+        <div className="flex-1 px-3 py-3">
           <div className="flex">
             <div className="flex-1 leading-10">
               <div className="font-bold text-lg">The Prophet</div>
@@ -113,6 +114,9 @@ const SingleBook = () => {
             <td>June 10th 2021 by Publish Media</td>
           </tr>
         </table>
+      </div>
+      <div>
+        <SingleReviews />
       </div>
     </div>
   );
