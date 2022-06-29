@@ -7,6 +7,7 @@ import { MainBody } from "../components/shared/main-body";
 import { Headings } from "../components/shared/headings";
 import { Footer } from "../components/footer";
 import { BookSlider } from "../components/bookSlider";
+import { Featured } from "../components/featured-section";
 
 export default function Home() {
   const headerOptions1 = {
@@ -172,10 +173,9 @@ export default function Home() {
               <BookSlider sliderBooks={sliderBooks} />
             </MainBody>
           </div>
-          <div className="w-full bg-[#E5E5E5] bg-opacity-[0.5] pb-5 pt-[2px]">
+          <div className="w-full bg-[#E5E5E5] bg-opacity-[0.5] pb-5 pt-[2px] h-auto">
             <MainBody>
-              <Headings options={headerOptions3} />
-              <BookSlider sliderBooks={sliderBooks} />
+              <Featured />
             </MainBody>
           </div>
         </main>

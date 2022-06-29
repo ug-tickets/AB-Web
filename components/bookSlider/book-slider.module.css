@@ -1,16 +1,16 @@
 .bookSliderBook {
-  width: 120px;
+  width: 130px;
   height: 100%;
-  margin-right: 50px;
+  margin-right: 20px;
 }
 .bookSliderBook img {
   width: 100%;
-  height: 160px;
+  height: 200px;
 }
 .prv {
   position: absolute;
   top: 30%;
-  left: 5px;
+  left: 1px;
   z-index: 1;
   width: 40px;
   height: 40px;
@@ -19,11 +19,12 @@
   cursor: pointer;
   padding-top: 3px;
   transform: rotate(-90deg);
+  box-shadow: 1px 1px 4px 1px #5a5a5a;
 }
 .nxt {
   position: absolute;
   top: 30%;
-  right: 5px;
+  right: 1px;
   z-index: 1;
   width: 40px;
   height: 40px;
@@ -33,6 +34,7 @@
   cursor: pointer;
   overflow: hidden;
   transform: rotate(90deg);
+  box-shadow: 1px 1px 4px 1px #5a5a5a;
 }
 .nxt::before {
   content: "\2303";
