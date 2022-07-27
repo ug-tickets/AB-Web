@@ -5,7 +5,7 @@ import styles from "./headings.module.css";
 const Headings = ({ options }) => {
   return options ? (
     <div
-      className={clsx("flex justify-between ml-2 md:ml-[2%] mr-10 py-2 my-5")}
+      className={clsx("flex justify-between ml-2 md:ml-[2%] mr-10 py-2 my-2")}
     >
       <div className={styles["heading"]}>{options.heading}</div>
       {options.allLinkUrl && (

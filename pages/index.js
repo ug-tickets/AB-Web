@@ -7,6 +7,7 @@ import { MainBody } from "../components/shared/main-body";
 import { Headings } from "../components/shared/headings";
 import { Footer } from "../components/footer";
 import { BookSlider } from "../components/bookSlider";
+import { Featured } from "../components/featured-section";
 
 export default function Home() {
   const headerOptions1 = {
@@ -111,7 +112,7 @@ export default function Home() {
                 <div className="w-32 md:flex-1 bg-[#99E6FC] bg-opacity-[0.09] h-24">
                   <div className="h-16 text-center">
                     <div className="pt-7 pl-1 flex justify-center">
-                      <img src="images/comedy.svg" className="w-9 h-9" />
+                      <img src="images/mystery.svg" className="w-9 h-9" />
                     </div>
                   </div>
                   <div className="py-3 text-center text-[10px]">Mystery</div>
@@ -119,10 +120,12 @@ export default function Home() {
                 <div className="w-32 md:flex-1 bg-[#040404] bg-opacity-[0.09] h-24">
                   <div className="h-16 text-center">
                     <div className="pt-7 pl-1 flex justify-center">
-                      <img src="images/classic-car.svg" className="w-9 h-9" />
+                      <img src="images/inspiration.svg" className="w-9 h-9" />
                     </div>{" "}
                   </div>
-                  <div className="py-3 text-center text-[10px]">Classics</div>
+                  <div className="py-3 text-center text-[10px]">
+                    Inspiration
+                  </div>
                 </div>
                 <div className="w-32 md:flex-1 bg-[#DF646E] bg-opacity-[0.09] h-24">
                   <div className="h-16 text-center">
@@ -138,10 +141,10 @@ export default function Home() {
                 <div className="w-32 md:flex-1 bg-[#470082] bg-opacity-[0.09] h-24">
                   <div className="h-16 text-center">
                     <div className="pt-7 pl-1 flex justify-center">
-                      <img src="images/zombie.svg" className="w-9 h-9" />
+                      <img src="images/christian.svg" className="w-9 h-9" />
                     </div>{" "}
                   </div>
-                  <div className="py-3 text-center text-[10px]">Horror</div>
+                  <div className="py-3 text-center text-[10px]">Christian</div>
                 </div>
                 <div className="w-32 md:flex-1 bg-[#FFD064] bg-opacity-[0.09] h-24">
                   <div className="h-16 text-center">
@@ -170,10 +173,9 @@ export default function Home() {
               <BookSlider sliderBooks={sliderBooks} />
             </MainBody>
           </div>
-          <div className="w-full bg-[#E5E5E5] bg-opacity-[0.5] pb-5 pt-[2px]">
+          <div className="w-full bg-[#E5E5E5] bg-opacity-[0.5] pb-5 pt-[2px] h-auto">
             <MainBody>
-              <Headings options={headerOptions3} />
-              <BookSlider sliderBooks={sliderBooks} />
+              <Featured />
             </MainBody>
           </div>
         </main>

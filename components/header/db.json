@@ -2,9 +2,8 @@
   "Header": {
     "mainHeader": [],
     "subHeader": [
-      { "link": "Home", "url": "#" },
       {
-        "link": "Categories",
+        "link": "Browse Categories",
         "url": "#",
         "deal": {
           "title": "Deals",
@@ -355,9 +354,9 @@
           }
         ]
       },
-      { "link": "Shop", "url": "#" },
-      { "link": "Features", "url": "#" },
-      { "link": "Blog", "url": "#" }
+      { "link": "Fiction", "url": "#" },
+      { "link": "Sell My Book", "url": "#" },
+      { "link": "AfricanBooks.com", "url": "#" }
     ]
   }
 }

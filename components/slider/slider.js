@@ -12,6 +12,7 @@ const Slider = () => {
       author: "Jerome K, Jerome",
       bookLnk: "",
       bookImg: "images/slide1.jpeg",
+      bookImgBg: "images/slide1bg.jpeg",
     },
     {
       title: "The Invisible Giant",
@@ -20,6 +21,7 @@ const Slider = () => {
       author: "Bram Stoker",
       bookLnk: "",
       bookImg: "images/slide2.jpeg",
+      bookImgBg: "images/slide2bg.jpeg",
     },
     {
       title: "It Was Never Going To Be Okay",
@@ -28,6 +30,7 @@ const Slider = () => {
       author: "Jaye Simpson",
       bookLnk: "",
       bookImg: "images/slide3.jpeg",
+      bookImgBg: "images/slide3bg.jpeg",
     },
     {
       title: "In The Company Of Ghosts",
@@ -36,6 +39,7 @@ const Slider = () => {
       author: "Andrew Author",
       bookLnk: "",
       bookImg: "images/slide4.jpeg",
+      bookImgBg: "images/slide4bg.jpeg",
     },
   ];
   const ImagesArr = useMemo(() => sliderImagesArr, []);

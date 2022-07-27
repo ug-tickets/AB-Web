@@ -1,9 +1,10 @@
 .heading {
-  font-size: 20px;
+  font-size: 13px;
+  font-weight: bold;
 }
 .headingsLink {
   position: relative;
-  font-size: 11px;
+  font-size: 12px;
   cursor: pointer;
   padding-top: 9px;
 }

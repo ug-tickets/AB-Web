@@ -6,14 +6,16 @@ const BookSlider = ({ sliderBooks }) => {
   if (!sliderBooks) return <></>;
   const outerSliderWidth = useRef(0);
   const totalBks = sliderBooks.length;
-  const innerSliderWidth = (120 + 50) * totalBks;
+  const innerSliderWidth = (130 + 20) * totalBks;
   const slides = sliderBooks.map((book, i) => (
     <div key={i} className={styles["bookSliderBook"]}>
       <img src={book.imgUrl} />
       <div className="py-2 pl-2 pr-1 bg-white">
         <div className="font-medium truncate text-[14px]">{book.title}</div>
         <div className="font-light text-[10px] truncate">{book.author}</div>
-        <div className="font-semibold mt-1 mb-3">{book.price}</div>
+        <div className="font-medium mt-1 mb-3 text-sm text-[#D2232A]">
+          {book.price}
+        </div>
         <div className="font-light text-[10px]">{book.rating}</div>
       </div>
     </div>
@@ -53,7 +55,7 @@ const BookSlider = ({ sliderBooks }) => {
     <div
       style={{
         width: "100%",
-        height: "290px",
+        height: "300px",
         "margin-bottom": "20px",
         position: "relative",
         overflow: "hidden",

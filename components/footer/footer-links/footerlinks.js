@@ -110,7 +110,7 @@ const FooterLinks = () => {
               )}
             >
               Follow us
-              <div className="flex justify-between h-7 mt-2">
+              <div className="flex pr-14 justify-between h-7 mt-2">
                 <img src="images/fb.svg" />
                 <img src="images/insta.svg" />
                 <img src="images/twtr.svg" />
@@ -119,7 +119,7 @@ const FooterLinks = () => {
               </div>
               <div className={styles["slum"]}>
                 <div className="font-semibold">Secure Payment</div>
-                <div className="flex justify-between h-7 mt-2">
+                <div className="flex pr-14 justify-between h-5 mt-2">
                   <img src="images/mtn.svg" />
                   <img src="images/atel.svg" />
                   <img src="images/vza.svg" />
