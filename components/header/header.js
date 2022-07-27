@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./header.module.css";
 import clsx from "clsx";
 import { DropDownContent } from "./drop-down-content";
+import Image from "next/image";
 
 const Header = () => {
   const [showDropDown, setShowDropDown] = useState(false);
@@ -74,7 +75,7 @@ const Header = () => {
       <div className={styles.header}>
         <div className={styles.headerInner}>
           <div className={clsx("w-[510px]", "sm:w-[250px]", styles["logo"])}>
-            <img src="images/logo.svg" />
+            <Image src="/images/logo.svg" width="135px" height="35px" />
           </div>
           <div className={clsx("hidden", "sm:block", styles["searchBar"])}>
             <span className="relative">
@@ -84,15 +85,15 @@ const Header = () => {
                 className={styles.input}
               />
               <div className={styles.searchico}>
-                <img src="images/search.svg" />
+                <Image src="/images/search.svg" width="25px" height="24px" />
               </div>
             </span>
           </div>
           <div className={styles.login}>
-            <img src="images/acc.svg" />
+            <Image src="/images/acc.svg" width="21px" height="15px" />
           </div>
           <div className={styles.cart}>
-            <img src="images/cart.png" />
+            <Image src="/images/cart.png" width="17px" height="12px" />
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./footer-deals.module.css";
 import { MainBody } from "../../shared/main-body";
+import Image from "next/image";
 
 const FooterDeals = () => {
   // assume these  are coming in as props
@@ -24,7 +25,11 @@ const FooterDeals = () => {
           </div>
           <div className="md:px-5 md:py-5 w-[300px]">
             <div className={styles["footer-deal-img"]}>
-              <img src="images/boundless.jpeg" />
+              <Image
+                src="/images/boundless.jpeg"
+                width="200px"
+                height="280px"
+              />
               <div className={styles["sale-tag"]}>
                 <span className="font-light text-[10px]">Save</span>
                 <div className="font-medium text-lg">$48</div>

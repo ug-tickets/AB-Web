@@ -10,7 +10,7 @@
           "subTitle": "eBooks",
           "btnTxt": "Shop Now",
           "btnUrl": "#",
-          "dealImg": "images/deal.png",
+          "dealImg": "/images/deal.png",
           "dealBg": "#f2becb"
         },
         "columns": [
@@ -132,7 +132,7 @@
           "subTitle": "eBooks",
           "btnTxt": "Shop Now",
           "btnUrl": "#",
-          "dealImg": "images/deal.png",
+          "dealImg": "/images/deal.png",
           "dealBg": "#f2becb"
         },
         "columns": [
@@ -254,7 +254,7 @@
           "subTitle": "eBooks",
           "btnTxt": "Shop Now",
           "btnUrl": "#",
-          "dealImg": "images/deal.png",
+          "dealImg": "/images/deal.png",
           "dealBg": "blue"
         },
         "columns": [

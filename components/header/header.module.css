@@ -11,10 +11,6 @@
 .logo {
   cursor: pointer;
 }
-.logo img {
-  width: 135px;
-  height: auto;
-}
 .searchBar {
   padding: 0 10px;
   width: 550px;
@@ -23,13 +19,9 @@
 
 .login {
   width: 58px;
-  padding: 6px 5px 5px 5px;
+  padding: 8px 5px 5px 5px;
   position: relative;
   cursor: pointer;
-}
-.login img {
-  width: 21px;
-  height: auto;
 }
 .login::after {
   content: "\2303";
@@ -41,12 +33,8 @@
 }
 .cart {
   width: 70px;
-  padding: 10px 5px 5px 5px;
+  padding: 7px 5px 5px 5px;
   cursor: pointer;
-}
-.cart img {
-  width: 17px;
-  height: auto;
 }
 .input {
   border: solid 1px #e6e6e6;

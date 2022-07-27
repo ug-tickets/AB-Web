@@ -2,6 +2,7 @@
   width: 130px;
   height: 100%;
   margin-right: 20px;
+  cursor: pointer;
 }
 .bookSliderBook img {
   width: 100%;

@@ -32,13 +32,15 @@ export default function Home() {
       price: "$20",
       rating: "4.05",
       imgUrl: "images/haunter.jpeg",
+      bookId: 1,
     },
     {
-      title: "The Haunter Of The Dark",
-      author: "H.P Lovercraft",
+      title: "The Widow Seat",
+      author: "Aminatta Forna",
       price: "$20",
       rating: "4.05",
-      imgUrl: "images/poetics.jpeg",
+      imgUrl: "images/aminatta.jpeg",
+      bookId: 2,
     },
     {
       title: "The Prophet",
@@ -46,13 +48,15 @@ export default function Home() {
       price: "$25",
       rating: "4.05",
       imgUrl: "images/prophet.jpeg",
+      bookId: 3,
     },
     {
-      title: "The Invisible Giant",
+      title: "A Girl Is A Body Of Water",
       author: "Bram Stoker",
       price: "$20",
       rating: "4.05",
-      imgUrl: "images/slide2.jpeg",
+      imgUrl: "images/agirl.jpeg",
+      bookId: 4,
     },
     {
       title: "The Haunter Of The Dark",
@@ -60,6 +64,7 @@ export default function Home() {
       price: "$20",
       rating: "4.05",
       imgUrl: "images/slide3.jpeg",
+      bookId: 5,
     },
     {
       title: "The Arrow",
@@ -67,6 +72,7 @@ export default function Home() {
       price: "$20",
       rating: "4.05",
       imgUrl: "images/arrow.jpeg",
+      bookId: 6,
     },
     {
       title: "Thinking",
@@ -74,20 +80,95 @@ export default function Home() {
       price: "$10",
       rating: "4.05",
       imgUrl: "images/thinking.jpeg",
+      bookId: 7,
     },
     {
-      title: "The Invisible Giant",
-      author: "Bram Stoker",
+      title: "How Beautiful We Were",
+      author: "Imbolo Mbue",
       price: "$20",
       rating: "4.05",
-      imgUrl: "images/slide2.jpeg",
+      imgUrl: "images/howbeautiful.jpg",
+      bookId: 8,
     },
     {
-      title: "The Prophet",
-      author: "Kahlil Gibran",
+      title: "Foreign Gods Inc",
+      author: "Okey Ndibe",
       price: "$25",
       rating: "4.05",
-      imgUrl: "images/prophet.jpeg",
+      imgUrl: "images/foreigngods.jpeg",
+      bookId: 9,
+    },
+  ];
+  const featuredBooks = [
+    {
+      title: "The Haunter Of The Dark",
+      category: "African Fiction & Novels",
+      synopsis: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type`,
+      author: "Kahil Gibran",
+      publisher: "Printea studios",
+      year: 2001,
+      imgUrl: "images/haunter.jpeg",
+      price: 84.78,
+    },
+    {
+      title: "A Girl Is A Body Of Water",
+      category: "Christian Classics",
+      synopsis: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type`,
+      author: "Jennifer Nansubuga Makumbi",
+      publisher: "Printea studios",
+      year: 1998,
+      imgUrl: "images/agirl.jpeg",
+      price: 84.78,
+    },
+    {
+      title: "The  Widow Seat",
+      category: "African Fiction & Novels",
+      synopsis: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type`,
+      author: "Aminatta Forna",
+      publisher: "Printea studios",
+      year: 2000,
+      imgUrl: "images/aminatta.jpeg",
+      price: 84.78,
+    },
+    {
+      title: "Foreign Gods Inc",
+      category: "African Fiction & Novels",
+      synopsis: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type`,
+      author: "Okey Ndibe",
+      publisher: "Printea studios",
+      year: 2001,
+      imgUrl: "images/foreigngods.jpeg",
+      price: 84.78,
+    },
+    {
+      title: "How Beautiful We Were",
+      category: "African Fiction & Novels",
+      synopsis: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type`,
+      author: "Imbolo Mbue",
+      publisher: "Printea studios",
+      year: 2001,
+      imgUrl: "images/howbeautiful.jpg",
+      price: 84.78,
+    },
+    {
+      title: "The Water House",
+      category: "African Fiction & Novels",
+      synopsis: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type`,
+      author: "Antonio Olinto",
+      publisher: "Printea studios",
+      year: 2001,
+      imgUrl: "images/waterhouse.jpeg",
+      price: 40.78,
+    },
+    {
+      title: "In the company of Ghosts",
+      category: "African Fiction & Novels",
+      synopsis: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type`,
+      author: "Kahil Gibran",
+      publisher: "Printea studios",
+      year: 2001,
+      imgUrl: "images/slide4.jpeg",
+      price: 50,
     },
   ];
 
@@ -175,7 +256,7 @@ export default function Home() {
           </div>
           <div className="w-full bg-[#E5E5E5] bg-opacity-[0.5] pb-5 pt-[2px] h-auto">
             <MainBody>
-              <Featured />
+              <Featured featuredBooks={featuredBooks} />
             </MainBody>
           </div>
         </main>

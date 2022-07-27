@@ -2,6 +2,7 @@ import React from "react";
 import { MainBody } from "../../shared/main-body";
 import styles from "./footer-links.module.css";
 import clsx from "clsx";
+import Image from "next/image";
 
 const FooterLinks = () => {
   const footerColumns = [
@@ -111,19 +112,19 @@ const FooterLinks = () => {
             >
               Follow us
               <div className="flex pr-14 justify-between h-7 mt-2">
-                <img src="images/fb.svg" />
-                <img src="images/insta.svg" />
-                <img src="images/twtr.svg" />
-                <img src="images/lin.svg" />
-                <img src="images/yt.svg" />
+                <Image src="/images/fb.svg" width="30px" height="30px" />
+                <Image src="/images/insta.svg" width="30px" height="30px" />
+                <Image src="/images/twtr.svg" width="30px" height="30px" />
+                <Image src="/images/lin.svg" width="30px" height="30px" />
+                <Image src="/images/yt.svg" width="30px" height="30px" />
               </div>
               <div className={styles["slum"]}>
                 <div className="font-semibold">Secure Payment</div>
                 <div className="flex pr-14 justify-between h-5 mt-2">
-                  <img src="images/mtn.svg" />
-                  <img src="images/atel.svg" />
-                  <img src="images/vza.svg" />
-                  <img src="images/master.svg" />
+                  <Image src="/images/mtn.svg" width="60px" height="60px" />
+                  <Image src="/images/atel.svg" width="60px" height="60px" />
+                  <Image src="/images/vza.svg" width="60px" height="60px" />
+                  <Image src="/images/master.svg" width="60px" height="60px" />
                 </div>
               </div>
             </div>
