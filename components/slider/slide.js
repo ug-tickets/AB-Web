@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./slide.module.css";
+import Link from "next/link";
 
 const Slide = ({ details }) => {
   return (
@@ -25,11 +26,11 @@ const Slide = ({ details }) => {
           <span className="text-xs">{`${details.reviews} reviews`}</span>
         </div>
         <div className="text-xs text-white">Author: {details.author}</div>
-        <a href={details.bookLnk}>
+        <Link href={`/book/${details.bookId}`}>
           <button className="my-5 bg-white w-48 cursor-pointer rounded-3xl text-black text-center font-normal uppercase">
             View Details
           </button>
-        </a>
+        </Link>
       </div>
     </section>
   );

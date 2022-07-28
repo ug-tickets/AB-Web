@@ -171,6 +171,15 @@ export default function Home() {
       price: 50,
     },
   ];
+  const footerDeal = {
+    sold: 7,
+    total: 17,
+    bookImg: "/images/boundless.jpeg",
+    bookId: 6,
+    price: 20,
+    saleEnd: "20-10-2022",
+    discount: 5,
+  };
 
   return (
     <div>
@@ -261,7 +270,7 @@ export default function Home() {
           </div>
         </main>
 
-        <Footer />
+        <Footer showDeals={true} deal={footerDeal} />
       </div>
     </div>
   );
