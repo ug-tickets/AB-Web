@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./single-book.module.css";
 import { SingleReviews } from "./singleReviews";
-import {cleanMarkup } from '../../helpers';
+import { cleanMarkup } from "../../helpers";
 import Image from "next/image";
 
 const SingleBook = ({ book }) => {
@@ -20,28 +20,24 @@ const SingleBook = ({ book }) => {
     publisher,
     datePublished,
     synopsis,
+    userReviews,
   } = book;
   return (
     <div className="text-[12px] font-light">
       <div className="sm:flex flex-start mb-7">
-        <div className="w-64 border h-[350px] p-3 rounded">
-          <Image
-            src={imgUrl}
-            height="380px"
-            width="270px"
-            className="rounded"
-          />
+        <div className="w-64 border h-[350px] p-3">
+          <Image src={imgUrl} height="380px" width="270px" />
         </div>
         <div className="flex-1 px-3 py-3">
-          <div className="flex">
+          <div className="md:flex">
             <div className="flex-1 leading-10">
               <div className="font-bold text-lg">{title}</div>
               Author: {author}
               <br />
-              {reviews} Reviews
+              {userReviews.length > 0 && `${userReviews.length} Reviews`}
               <div className="font-bold">{price}</div>
             </div>
-            <div className="flex-2">
+            <div className="flex-2 my-3 md:my-0">
               <button className={styles.addToCart}>ADD TO CART</button>
             </div>
           </div>
@@ -130,7 +126,7 @@ const SingleBook = ({ book }) => {
         </table>
       </div>
       <div>
-        <SingleReviews />
+        <SingleReviews userReviews={userReviews} />
       </div>
     </div>
   );

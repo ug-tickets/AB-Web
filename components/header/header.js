@@ -3,6 +3,7 @@ import styles from "./header.module.css";
 import clsx from "clsx";
 import { DropDownContent } from "./drop-down-content";
 import Image from "next/image";
+import Link from "next/link";
 
 const Header = () => {
   const [showDropDown, setShowDropDown] = useState(false);
@@ -71,12 +72,14 @@ const Header = () => {
       </>
     ));
   return (
-    <>
+    <div>
       <div className={styles.header}>
         <div className={styles.headerInner}>
-          <div className={clsx("w-[510px]", "sm:w-[250px]", styles["logo"])}>
-            <Image src="/images/logo.svg" width="135px" height="35px" />
-          </div>
+          <Link href="/">
+            <div className={clsx("w-[510px]", "sm:w-[250px]", styles["logo"])}>
+              <Image src="/images/logo.svg" width="135px" height="35px" />
+            </div>
+          </Link>
           <div className={clsx("hidden", "sm:block", styles["searchBar"])}>
             <span className="relative">
               <input
@@ -113,7 +116,7 @@ const Header = () => {
           {theSubHeader}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

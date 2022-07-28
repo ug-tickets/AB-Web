@@ -3,7 +3,7 @@ import { SinglePage } from "../../components/shared/layouts";
 import { SingleBook, SingleSideBar } from "../../components/singleBook/index";
 import styles from "../../styles/Home.module.css";
 
-const BookDetails = ({ bookDetails }) => {
+const BookDetails = ({ bookDetails, crossSales }) => {
   return (
     <SinglePage>
       <div className="md:flex py-10">
@@ -11,7 +11,7 @@ const BookDetails = ({ bookDetails }) => {
           <SingleBook book={bookDetails} />
         </div>
         <div className={styles.sideBar}>
-          <SingleSideBar />
+          <SingleSideBar crossSales={crossSales} />
         </div>
       </div>
     </SinglePage>
@@ -25,6 +25,7 @@ export async function getServerSideProps(context) {
     params: { book_id },
   } = context;
   let requestedBook;
+  let crossSales;
   response.books.every((bk) => {
     if (bk.bookId.toString() === book_id) {
       requestedBook = bk;
@@ -32,9 +33,11 @@ export async function getServerSideProps(context) {
     }
     return true;
   });
+  crossSales = response.books.filter((bk) => bk.bookId.toString() !== book_id);
   return {
     props: {
       bookDetails: requestedBook,
+      crossSales,
     },
   };
 }
