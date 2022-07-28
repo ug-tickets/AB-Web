@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./slide.module.css";
 import Link from "next/link";
+import { Rating } from "../rating/rating";
 
 const Slide = ({ details }) => {
   return (
@@ -22,8 +23,12 @@ const Slide = ({ details }) => {
       <div className={styles.sliderBookPreview}>
         <div className="text-xl text-white">{details.title}</div>
         <div className="text-white">
-          <span className="text-lg">${details.price}</span>{" "}
-          <span className="text-xs">{`${details.reviews} reviews`}</span>
+          <span className="text-lg">${details.price}</span>&nbsp;&nbsp;&nbsp;
+          <Rating
+            value={details.rating}
+            color="y"
+            text={` ${details.reviews} reviews`}
+          />
         </div>
         <div className="text-xs text-white">Author: {details.author}</div>
         <Link href={`/book/${details.bookId}`}>

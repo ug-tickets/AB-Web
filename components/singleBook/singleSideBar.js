@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Rating } from "../rating";
 
 const SingleSideBar = ({ crossSales }) => {
   if (!crossSales) return null;
@@ -23,7 +24,11 @@ const SingleSideBar = ({ crossSales }) => {
                     <div className="flex-1 leading-5 pt-1">
                       <div className="font-bold">{bk.title}</div>
                       <div>{bk.author}</div>
-                      <div>{`${bk.rating && bk.rating > 0 && bk.rating}`}</div>
+                      <div className="my-1">
+                        {bk.rating && bk.rating > 0 && (
+                          <Rating value={bk.rating} />
+                        )}
+                      </div>
                       <div className="font-semibold text-[#257BC7]">
                         {bk.price}
                       </div>

@@ -51,7 +51,9 @@ const Featured = ({ featuredBooks }) => {
               </div>
             </div>
             <div className="flex justify-between px-3 my-5">
-              <div className="text-[#D2232A]">$ {firstBook.price}</div>
+              <div className="text-[#D2232A] font-bold">
+                $ {firstBook.price}
+              </div>
               <button className="bg-[#D2232A] px-4 py-1 text-xs text-white rounded-[30px]">
                 Add to Cart
               </button>

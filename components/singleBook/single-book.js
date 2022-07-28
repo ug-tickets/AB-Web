@@ -3,6 +3,7 @@ import styles from "./single-book.module.css";
 import { SingleReviews } from "./singleReviews";
 import { cleanMarkup } from "../../helpers";
 import Image from "next/image";
+import { Rating } from "../rating";
 
 const SingleBook = ({ book }) => {
   if (!book) return null;
@@ -34,7 +35,14 @@ const SingleBook = ({ book }) => {
               <div className="font-bold text-lg">{title}</div>
               Author: {author}
               <br />
-              {userReviews.length > 0 && `${userReviews.length} Reviews`}
+              {
+                <Rating
+                  value={rating}
+                  text={
+                    userReviews.length > 0 && `  ${userReviews.length} Reviews`
+                  }
+                />
+              }
               <div className="font-bold">{price}</div>
             </div>
             <div className="flex-2 my-3 md:my-0">

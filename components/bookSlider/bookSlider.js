@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import styles from "./book-slider.module.css";
 import clsx from "clsx";
 import Link from "next/link";
+import { Rating } from "../rating";
 
 const BookSlider = ({ sliderBooks }) => {
   if (!sliderBooks) return <></>;
@@ -15,10 +16,12 @@ const BookSlider = ({ sliderBooks }) => {
         <div className="py-2 pl-2 pr-1 bg-white">
           <div className="font-bold truncate text-[11px]">{book.title}</div>
           <div className="font-light text-[9px] truncate">{book.author}</div>
-          <div className="font-medium mt-1 mb-3 text-sm text-[#D2232A]">
+          <div className="font-bold mt-1 mb-3 text-sm text-[#D2232A]">
             {book.price}
           </div>
-          <div className="font-light text-[10px]">{book.rating}</div>
+          <div className="font-light text-[10px]">
+            <Rating value={book.rating} />
+          </div>
         </div>
       </div>
     </Link>
