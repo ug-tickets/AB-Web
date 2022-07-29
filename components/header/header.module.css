@@ -2,6 +2,7 @@
   width: 100vw;
   padding: 8px;
   font-size: 13px;
+  background-color: white;
 }
 .headerInner {
   max-width: 1000px;

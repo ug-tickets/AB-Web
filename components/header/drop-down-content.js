@@ -2,6 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import styles from "./drop-down.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const DropDownContent = ({ item, category }) => {
   return category && item.link === category ? (
@@ -30,7 +31,9 @@ const DropDownContent = ({ item, category }) => {
                 <ul className="p-0 text-left text-[10px]">
                   {row.subLinks.map((subLnk, l) => (
                     <li className="leading-6 list-none" key={l}>
-                      <a href={subLnk.url}>{subLnk.link}</a>
+                      <Link href={`/categories/${subLnk.link}`}>
+                        {subLnk.link}
+                      </Link>
                     </li>
                   ))}
                 </ul>
