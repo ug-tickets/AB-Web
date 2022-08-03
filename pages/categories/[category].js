@@ -17,7 +17,7 @@ const Categories = ({ category, books }) => {
   };
   return (
     <SinglePage>
-      <div className="pt-5 pb-16">
+      <div className="pt-28 pb-16">
         <div className="flex my-5 justify-end">
           <div
             className="border w-[40px] h-[30px] mr-3 cursor-pointer"

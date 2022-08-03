@@ -1,3 +1,9 @@
+.stickyHeader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
 .header {
   width: 100vw;
   padding: 8px;
@@ -62,7 +68,7 @@
   content: "\2303";
   position: absolute;
   right: -13px;
-  top: -1px;
+  top: -2px;
   transform: rotate(180deg);
   transition: all 0.1s;
 }

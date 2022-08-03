@@ -26,8 +26,10 @@ const Header = () => {
     subHeader.map((item, i) => (
       <>
         {!item.columns ? (
-          <div key={i} className="h-11 pt-3 flex-1 lg:text-center">
-            <a href={item.url}>{item.link}</a>
+          <div key={i} className="h-11 pt-[11px] flex-1 lg:text-center">
+            <a href={item.url} className="text-[12px]">
+              {item.link}
+            </a>
           </div>
         ) : (
           <div
@@ -52,6 +54,7 @@ const Header = () => {
                 "p-0",
                 "relative",
                 "box-boarder",
+                "text-[12px]",
                 "text-left",
                 "w-11/12",
                 "md:w-auto",
@@ -72,7 +75,7 @@ const Header = () => {
       </>
     ));
   return (
-    <div>
+    <div className={styles.stickyHeader}>
       <div className={styles.header}>
         <div className={styles.headerInner}>
           <Link href="/">
@@ -106,8 +109,10 @@ const Header = () => {
           "w-full",
           "relative",
           "bg-regal-gray",
+          "opacity-95",
           "pl-2",
           "pb-4",
+          "border",
           "lg:pb-0",
           "lg:pl-0"
         )}

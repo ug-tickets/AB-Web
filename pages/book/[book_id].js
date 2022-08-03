@@ -6,7 +6,7 @@ import styles from "../../styles/Home.module.css";
 const BookDetails = ({ bookDetails, crossSales }) => {
   return (
     <SinglePage>
-      <div className="md:flex py-10">
+      <div className="md:flex py-40">
         <div className={styles.bkDetailsSide}>
           <SingleBook book={bookDetails} />
         </div>
