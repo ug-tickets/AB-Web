@@ -2,79 +2,9 @@ import React, { useState } from "react";
 import styles from "./featured.module.css";
 import clsx from "clsx";
 
-const Featured = () => {
-  const featuredBooks = [
-    {
-      title: "The Haunter Of The Dark",
-      category: "African Fiction & Novels",
-      synopsis: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type`,
-      author: "Kahil Gibran",
-      publisher: "Printea studios",
-      year: 2001,
-      imgUrl: "images/haunter.jpeg",
-      price: 84.78,
-    },
-    {
-      title: "A Girl Is A Body Of Water",
-      category: "Christian Classics",
-      synopsis: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type`,
-      author: "Jennifer Nansubuga Makumbi",
-      publisher: "Printea studios",
-      year: 1998,
-      imgUrl: "images/agirl.jpeg",
-      price: 84.78,
-    },
-    {
-      title: "The  Widow Seat",
-      category: "African Fiction & Novels",
-      synopsis: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type`,
-      author: "Aminatta Forna",
-      publisher: "Printea studios",
-      year: 2000,
-      imgUrl: "images/aminatta.jpeg",
-      price: 84.78,
-    },
-    {
-      title: "Foreign Gods Inc",
-      category: "African Fiction & Novels",
-      synopsis: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type`,
-      author: "Okey Ndibe",
-      publisher: "Printea studios",
-      year: 2001,
-      imgUrl: "images/foreigngods.jpeg",
-      price: 84.78,
-    },
-    {
-      title: "How Beautiful We Were",
-      category: "African Fiction & Novels",
-      synopsis: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type`,
-      author: "Imbolo Mbue",
-      publisher: "Printea studios",
-      year: 2001,
-      imgUrl: "images/howbeautiful.jpg",
-      price: 84.78,
-    },
-    {
-      title: "The Water House",
-      category: "African Fiction & Novels",
-      synopsis: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type`,
-      author: "Antonio Olinto",
-      publisher: "Printea studios",
-      year: 2001,
-      imgUrl: "images/waterhouse.jpeg",
-      price: 40.78,
-    },
-    {
-      title: "In the company of Ghosts",
-      category: "African Fiction & Novels",
-      synopsis: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type`,
-      author: "Kahil Gibran",
-      publisher: "Printea studios",
-      year: 2001,
-      imgUrl: "images/slide4.jpeg",
-      price: 50,
-    },
-  ];
+const Featured = ({ featuredBooks }) => {
+  if (!featuredBooks) return <></>;
+
   const [currentBook, setCurrentBook] = useState(0);
   const firstBook = featuredBooks[currentBook];
   function switchBooks(index) {
@@ -121,7 +51,9 @@ const Featured = () => {
               </div>
             </div>
             <div className="flex justify-between px-3 my-5">
-              <div className="text-[#D2232A]">$ {firstBook.price}</div>
+              <div className="text-[#D2232A] font-bold">
+                $ {firstBook.price}
+              </div>
               <button className="bg-[#D2232A] px-4 py-1 text-xs text-white rounded-[30px]">
                 Add to Cart
               </button>

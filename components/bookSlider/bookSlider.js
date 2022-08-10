@@ -1,6 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
 import styles from "./book-slider.module.css";
 import clsx from "clsx";
+import Link from "next/link";
+import { Rating } from "../rating";
 
 const BookSlider = ({ sliderBooks }) => {
   if (!sliderBooks) return <></>;
@@ -8,17 +10,21 @@ const BookSlider = ({ sliderBooks }) => {
   const totalBks = sliderBooks.length;
   const innerSliderWidth = (130 + 20) * totalBks;
   const slides = sliderBooks.map((book, i) => (
-    <div key={i} className={styles["bookSliderBook"]}>
-      <img src={book.imgUrl} />
-      <div className="py-2 pl-2 pr-1 bg-white">
-        <div className="font-medium truncate text-[14px]">{book.title}</div>
-        <div className="font-light text-[10px] truncate">{book.author}</div>
-        <div className="font-medium mt-1 mb-3 text-sm text-[#D2232A]">
-          {book.price}
+    <Link href={`/book/${book.bookId}`}>
+      <div key={i} className={styles["bookSliderBook"]}>
+        <img src={book.imgUrl} />
+        <div className="py-2 pl-2 pr-1 bg-white">
+          <div className="font-bold truncate text-[11px]">{book.title}</div>
+          <div className="font-light text-[9px] truncate">{book.author}</div>
+          <div className="font-bold mt-1 mb-3 text-sm text-[#D2232A]">
+            {book.price}
+          </div>
+          <div className="font-light text-[10px]">
+            <Rating value={book.rating} />
+          </div>
         </div>
-        <div className="font-light text-[10px]">{book.rating}</div>
       </div>
-    </div>
+    </Link>
   ));
   const [hiddenPart, setHiddenPart] = useState(null);
   const [translateBy, setTranslateBy] = useState(0);
@@ -56,7 +62,7 @@ const BookSlider = ({ sliderBooks }) => {
       style={{
         width: "100%",
         height: "300px",
-        "margin-bottom": "20px",
+        "margin-bottom": "50px",
         position: "relative",
         overflow: "hidden",
         display: "flex",
