@@ -21,7 +21,7 @@ export default function Home() {
     linkTxt: "View All",
   };
   const headerOptions3 = {
-    heading: "Featured This Week",
+    heading: "Books On Sale",
     allLinkUrl: "/categories/book",
     linkTxt: "View All",
   };
@@ -80,6 +80,81 @@ export default function Home() {
       price: "$10",
       rating: 4,
       imgUrl: "images/thinking.jpeg",
+      bookId: 7,
+    },
+    {
+      title: "How Beautiful We Were",
+      author: "Imbolo Mbue",
+      price: "$20",
+      rating: 4.5,
+      imgUrl: "images/howbeautiful.jpg",
+      bookId: 8,
+    },
+    {
+      title: "Foreign Gods Inc",
+      author: "Okey Ndibe",
+      price: "$25",
+      rating: 2.5,
+      imgUrl: "images/foreigngods.jpeg",
+      bookId: 9,
+    },
+  ];
+  const sliderBooks2 = [
+    {
+      title: "Bound To Violence",
+      author: "H.P Lovercraft",
+      price: "$20",
+      rating: 4.5,
+      imgUrl: "images/bound.jpeg",
+      bookId: 1,
+    },
+
+    {
+      title: "A Walk In The Night",
+      author: "Kahlil Gibran",
+      price: "$25",
+      rating: 2,
+      imgUrl: "images/awalk.jpeg",
+      bookId: 3,
+    },
+    {
+      title: "A Girl Is A Body Of Water",
+      author: "Bram Stoker",
+      price: "$20",
+      rating: 3,
+      imgUrl: "images/agirl.jpeg",
+      bookId: 4,
+    },
+    {
+      title: "The Widow Seat",
+      author: "Aminatta Forna",
+      price: "$20",
+      rating: 4,
+      imgUrl: "images/aminatta.jpeg",
+      bookId: 2,
+    },
+    {
+      title: "Mad House",
+      author: "H.P Lovercraft",
+      price: "$20",
+      rating: 4,
+      imgUrl: "images/madhouse.jpeg",
+      bookId: 5,
+    },
+    {
+      title: "The Arrow",
+      author: "Sumita Chakhaborty",
+      price: "$20",
+      rating: 3,
+      imgUrl: "images/arrow.jpeg",
+      bookId: 6,
+    },
+    {
+      title: "The Fugitives",
+      author: "Daniel Kahneman",
+      price: "$10",
+      rating: 4,
+      imgUrl: "images/fugs.jpeg",
       bookId: 7,
     },
     {
@@ -261,6 +336,12 @@ export default function Home() {
             <MainBody>
               <Headings options={headerOptions2} />
               <BookSlider sliderBooks={sliderBooks} />
+            </MainBody>
+          </div>
+          <div className="w-full pb-0 pt-[2px]">
+            <MainBody>
+              <Headings options={headerOptions3} />
+              <BookSlider sliderBooks={sliderBooks2} />
             </MainBody>
           </div>
           <div className="w-full bg-[#E5E5E5] bg-opacity-[0.5] pb-5 pt-[2px] h-auto">

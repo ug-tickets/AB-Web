@@ -106,7 +106,7 @@ const Header = ({ showSubHeader }) => {
               onClick={() => setShowCartPreview(!showCartPreview)}
             >
               <Image src="/images/cart.png" width="17px" height="12px" />
-              <div className={styles.cartCount}>5</div>
+              <div className={styles.cartCount}>3</div>
             </div>
             {showCartPreview && (
               <div className={styles.cartPreview}>
