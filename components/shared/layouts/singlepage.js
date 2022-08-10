@@ -4,7 +4,7 @@ import { Header } from "../../header";
 import { Footer } from "../../footer";
 import { MainBody } from "../main-body";
 
-const SinglePage = ({ children }) => {
+const SinglePage = ({ children, showSubHeader = true }) => {
   return (
     <div className="w-full">
       <Head>
@@ -15,7 +15,7 @@ const SinglePage = ({ children }) => {
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+      <Header showSubHeader={showSubHeader} />
       <MainBody>{children}</MainBody>
       <Footer showDeals={false} />
     </div>

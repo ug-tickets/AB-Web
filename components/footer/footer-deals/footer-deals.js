@@ -58,7 +58,7 @@ const FooterDeals = ({ bookDeal }) => {
                     height: "100%",
                     width: `${progress}%`,
                     background: "#24F847",
-                    "border-radius": "40px",
+                    borderRadius: "40px",
                   }}
                 ></div>
               </div>
