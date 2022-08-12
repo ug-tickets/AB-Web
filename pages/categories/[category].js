@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { MainBody } from "../../components/shared/main-body";
 import { Rating } from "../../components/rating";
 import Link from "next/link";
 import { SinglePage } from "../../components/shared/layouts";

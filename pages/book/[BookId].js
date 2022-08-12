@@ -22,18 +22,18 @@ export default BookDetails;
 export async function getServerSideProps(context) {
   const response = await require("../../eventsdb.json");
   const {
-    params: { book_id },
+    params: { BookId },
   } = context;
   let requestedBook;
-  let crossSales;
+  const crossSales;
   response.books.every((bk) => {
-    if (bk.bookId.toString() === book_id) {
+    if (bk.bookId.toString() === BookId) {
       requestedBook = bk;
       return false;
     }
     return true;
   });
-  crossSales = response.books.filter((bk) => bk.bookId.toString() !== book_id);
+  crossSales = response.books.filter((bk) => bk.bookId.toString() !== BookId);
   return {
     props: {
       bookDetails: requestedBook,

@@ -73,7 +73,7 @@ const Slider = () => {
           }}
         >
           {ImagesArr.map((s) => (
-            <Slide details={s} />
+            <Slide details={s} key={s.bookId} />
           ))}
         </div>
       </div>

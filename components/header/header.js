@@ -28,14 +28,16 @@ const Header = ({ showSubHeader }) => {
     subHeader.map((item, i) => (
       <>
         {!item.columns ? (
-          <div key={i} className="h-11 pt-[11px] flex-1 lg:text-center">
+          <div
+            className="h-11 pt-[11px] flex-1 lg:text-center"
+            key={Math.random() * 1000}
+          >
             <a href={item.url} className="text-[12px]">
               {item.link}
             </a>
           </div>
         ) : (
           <div
-            key={i}
             className={clsx(
               "flex-1",
               "md:mx-3",
@@ -48,6 +50,7 @@ const Header = ({ showSubHeader }) => {
             data-category={item.link}
             onMouseEnter={(e) => renderDropDown(e)}
             onMouseLeave={() => setShowDropDown(false)}
+            key={i}
           >
             <button
               className={clsx(

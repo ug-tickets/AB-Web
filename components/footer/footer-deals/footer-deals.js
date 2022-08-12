@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const FooterDeals = ({ bookDeal }) => {
   if (!bookDeal) return null;
-  const { sold, total, bookImg, bookId, price, discount, saleEnd } = bookDeal;
+  const { sold, total, bookImg, bookId, price, discount } = bookDeal;
   const remain = total - sold;
   const progress = (sold / (sold + remain)) * 100;
   return (
