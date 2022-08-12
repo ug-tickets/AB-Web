@@ -10,9 +10,9 @@ const Slide = ({ details }) => {
         display: "flex",
         flex: "1",
         background: `url(images/moz.svg), url(${details.bookImgBg})`,
-        "background-repeat": "repeat, no-repeat",
+        backgroundRepeat: "repeat, no-repeat",
         backgroundSize: "contain, cover",
-        "background-position": "top, bottom",
+        backgroundPosition: "top, bottom",
       }}
     >
       <div className={styles.sliderSnippet}>

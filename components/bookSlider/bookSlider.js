@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
 import styles from "./book-slider.module.css";
-import clsx from "clsx";
 import Link from "next/link";
 import { Rating } from "../rating";
 
@@ -10,7 +9,7 @@ const BookSlider = ({ sliderBooks }) => {
   const totalBks = sliderBooks.length;
   const innerSliderWidth = (130 + 20) * totalBks;
   const slides = sliderBooks.map((book, i) => (
-    <Link href={`/book/${book.bookId}`}>
+    <Link href={`/book/${book.bookId}`} key={i}>
       <div key={i} className={styles["bookSliderBook"]}>
         <img src={book.imgUrl} />
         <div className="py-2 pl-2 pr-1 bg-white">
@@ -62,7 +61,7 @@ const BookSlider = ({ sliderBooks }) => {
       style={{
         width: "100%",
         height: "300px",
-        "margin-bottom": "50px",
+        marginBottom: "50px",
         position: "relative",
         overflow: "hidden",
         display: "flex",

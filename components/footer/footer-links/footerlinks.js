@@ -87,8 +87,8 @@ const FooterLinks = () => {
         <div key={i} className="flex-1">
           <div className="font-semibold font-light py-3">{col.heading}</div>
           <div>
-            {col["links"].map((lx, i) => (
-              <div className="py-2 font-light">
+            {col["links"].map((lx, j) => (
+              <div className="py-2 font-light" key={j}>
                 {" "}
                 <a href={lx.lnk}>{lx.title}</a>
               </div>

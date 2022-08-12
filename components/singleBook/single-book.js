@@ -12,7 +12,6 @@ const SingleBook = ({ book }) => {
     author,
     price,
     rating,
-    reviews,
     imgUrl,
     ISBN,
     language,
