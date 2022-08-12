@@ -25,7 +25,6 @@ export async function getServerSideProps(context) {
     params: { BookId },
   } = context;
   let requestedBook;
-  const crossSales;
   response.books.every((bk) => {
     if (bk.bookId.toString() === BookId) {
       requestedBook = bk;
@@ -33,7 +32,9 @@ export async function getServerSideProps(context) {
     }
     return true;
   });
-  crossSales = response.books.filter((bk) => bk.bookId.toString() !== BookId);
+  const crossSales = response.books.filter(
+    (bk) => bk.bookId.toString() !== BookId
+  );
   return {
     props: {
       bookDetails: requestedBook,
